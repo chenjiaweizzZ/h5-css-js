@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img元素中的图片路径</title>
+</head>
+<body>
+    <!-- 网络图片地址 -->
+    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="网络图片">
+    <!-- 本地图片
+    绝对路径(absolute):根盘符开始查找,一直找到这个资源 基本上用不上-->
+    <!-- Not allowed to load local resource: file:///F:/react_demo/h5-css-js/html5/images/948874.jpg -->
+    <!-- open in default browser -->
+    <!-- windows复制目录时候默认是反斜杠,但是应该是/,但是在mac或者linux上就是\ -->
+    <img src="F:\react_demo\h5-css-js\html5\images\948874.jpg" alt="绝对路径">
+    <!-- 相对路径(relative) 常用-->
+    <!-- .代表当前文件夹,可以省略 -->
+    <!-- ..代表上级文件夹 -->
+    <img src="./images/948874.jpg" alt="相对路径">  
+</body>
+</html>
