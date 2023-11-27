@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font缩写</title>
+    <style>
+        /* font-style font-variant font-weight font-size/line-height font-family */
+        /* font-style font-variant font-weight可以调换位置 */
+        /* line-height可以省略,如果不省略,必须在font-size后面 */
+        /* font-size font-family不可以调换顺序,不可以省略 */
+        .box {
+            font: italic small-caps 700 30px/30px serif;
+            /* font: italic small-caps 700 30px/1 serif; */
+        }
+
+        .boxo {
+            font-size: 30px;
+            font-weight: 700;
+            font-variant: small-caps;
+            font-style: italic;
+            font-family: serif;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxo">我是div元素</div>
+    <div class="box">我是div元素</div>
+
+</body>
+
+</html>
