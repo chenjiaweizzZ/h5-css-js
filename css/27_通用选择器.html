@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用选择器</title>
+    <style>
+        /* div,p,h2,span{
+            font-size: 30px;
+        } */
+        /* * {
+            font-size: 80px;
+        } */
+        /* 通配 */
+        /* body, p, div, h2, span {
+            margin: 0;
+            padding: 0;
+        } */
+        /* 更推荐的写法 */
+        div {
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div>我是div元素</div>
+    <p>我是p元素</p>
+    <div>
+        <h2>我是div的h2元素</h2>
+        <p>我是div的p元素<span>div的p的span</span></p>
+    </div>
+</body>
+</html>
