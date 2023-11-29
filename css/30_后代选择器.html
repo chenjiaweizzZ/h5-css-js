@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器 */
+        .home span {
+            color: #f00;
+        }
+        /* 直接子代 */
+        .home > span {
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="home"> 
+        <span>啦啦啦啦</span>
+        <div class="box">
+            <p>我是p元素</p>
+            <span class="home-item">陈家伟陈家伟</span>
+        </div>
+        <div class="content">
+            <div class="desc">
+                <p>
+                    <span>嘿嘿嘿</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

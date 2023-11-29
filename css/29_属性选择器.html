@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        [title] {
+            color: #f00;
+        }
+
+        [title="div"] {
+            background-color: #0f0;
+        }
+        /* .box [title] {
+            color: aqua;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>我是div</div>
+        <div title="div">我也是div元素</div>
+        <p>我是p元素</p>
+        <h2 title="h2">我是h2元素</h2>
+    </div>
+
+</body>
+
+</html>

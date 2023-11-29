@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟选择器</title>
+    <style>
+        /* .box + div {
+            color: #f00;
+        } */
+        /* .box + .content {
+            color: #f00;
+        } */
+        .box ~ div {
+            color: #f00;
+        }
+        /* 自己不算... */
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="box">陈家伟陈家伟</div>
+        <div class="content">难过难过难过</div>
+        <div>绾歌绾歌绾歌</div>
+        <div>逆水寒逆水寒</div>
+    </div>
+</body>
+</html>
