@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态伪类</title>
+    <style>
+        /* a元素的链接从来没有被访问过 */
+        a:link {
+            color: #0f0
+        }
+        a:visited {
+            color: #00f;
+        }
+        a:focus {
+            color: #ff0
+        }
+        a:hover {
+            color: #f00;
+        }
+        /* hover必须放在link和visited后面
+        active必须放在hover后面 */
+        a:active {
+            color: #000
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.github.com">github</a>
+    <a href="http://www.xiaomi.com">xiaomi</a>
+</body>
+</html>
