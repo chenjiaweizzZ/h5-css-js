@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承-层叠-类型</title>
+    <style>
+        /* h1, p, span {
+            color: #f00;
+        } */
+        div.box {
+            color: red;
+            font-size: 30px;
+            /* font-size: 2em; */
+            /* 继承继承值 */
+        }
+        /* font-size/font-family/font-weight/line-height/color/text-align */
+        /* 一般和字体相关的属性都可以继承 */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>我是h1元素</h1>
+        <p>我是p元素
+            <span>嘿嘿嘿</span>
+            <strong>啦啦啦啦啦</strong>
+        </p>
+        <span>我是span元素</span>
+    </div>
+</body>
+</html>
