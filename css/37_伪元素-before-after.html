@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before-after</title>
+    <style>
+        .before {
+            color: red;
+        }
+        .after {
+            color: blue;
+        }
+        .item::before {
+            content: '321';
+            color: #f00;
+            font-size: 30px;
+        }
+        .item::after {
+            content: 'cba';
+            color: #0f0;
+            font-size: 30px;
+        }
+        .item2::before {
+            content: url(./assets/images/头条图标/hot.png);
+            color: #f00;
+            font-size: 30px;
+            position: relative;
+            left: 1px;
+            top: 2px;
+        }
+        .item3::before {
+            content: url(./assets/images/头条图标/new.png);
+            color: #f00;
+            font-size: 30px;
+        }
+        .item4::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="before">123</span>
+        我是div元素
+        <span class="after">abc</span>
+    </div>
+    <div class="box2 item">我是box2</div>
+    <div class="box2 item2">我是box3</div>
+    <div class="box2 item3">我是box4</div>
+    <div class="box2 item4">我是box4</div>
+</body>
+</html>
