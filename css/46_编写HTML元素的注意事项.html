@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写html元素的注意事项</title>
+</head>
+<body>
+    <!-- 一般情况下,block和inline-block可以包含任何元素 -->
+    <div>
+        <h1></h1>
+        <p></p>
+        <a href=""></a>
+        <img src="" alt="">
+    </div>
+    <!-- 特殊: 不要在p元素中放div元素 -->
+    <p>
+        123
+        <div>我是div</div>
+        abc
+    </p>
+    <!-- 行内级元素一般只包含行内级元素 -->
+    <!-- 行内级元素中不要放块级元素 -->
+</body>
+</html>

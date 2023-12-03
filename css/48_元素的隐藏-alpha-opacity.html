@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            /* color: #ff000000; */
+            /* color: #ff0000ff; */
+            color: rgba(0,0,0,0);
+            color: rgba(255,5,5,.5);
+        }
+        /* 背景颜色的透明度隐藏 */
+        .box2 {
+            /* background-color: rgba(0,0,0,0); */
+            background-color: transparent;
+            /* 只是背景透明 */
+        }
+        .box3 {
+            opacity: 0.5;
+            /* 包括背景也变成透明了 文字+背景 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">我是box1</div>
+    <div class="box2">我是box2</div>
+    <div class="box3">我是box3</div>
+</body>
+</html>
