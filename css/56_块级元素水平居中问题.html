@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素水平居中问题</title>
+    <!-- 块级元素一定占据父元素的整行 -->
+    <style>
+        body {
+            width: 600px;
+        }
+         /* body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: #f00;
+            display: inline-block;
+        } */
+        .box {
+            margin: 0 auto;
+            /* 父元素一行的宽度 */
+            height: 100px;
+            width: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

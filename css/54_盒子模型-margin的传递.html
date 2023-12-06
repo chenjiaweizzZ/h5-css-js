@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型-margin的传递</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+            /* border: 1px solid transparent; */
+            overflow: auto;
+            /* BFC */
+        }
+        .container {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            /* margin-top: 100px; */
+            /* margin会向上传递 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container"></div>
+    </div>
+</body>
+</html>
