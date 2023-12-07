@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        .box1 {
+            box-sizing: content-box;
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            padding: 30px;
+            border: 10px solid #ff0;
+        }
+        .box2 {
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            padding: 30px;
+            border: 10px solid #ff0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

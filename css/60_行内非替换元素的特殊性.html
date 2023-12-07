@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内非替换元素的特殊性</title>
+    <style>
+        .content {
+            background-color: #f00;
+            color: #ff0;
+            /* 内容: width/height不生效 */
+            height: 300px;
+            width: 300px;
+            /* 内边距 padding 上下被撑起来但是不占据空间*/
+            /* padding: 50px; */
+
+            /* 边框: border */
+            /* border: 50px solid #ff0; */
+
+            /* 外边距 margin */
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <span class="content">
+        我是行内非替换元素 
+    </span>
+    <!-- <span>111</span> -->
+</body>
+</html>
