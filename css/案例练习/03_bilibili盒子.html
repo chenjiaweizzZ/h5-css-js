@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilibili盒子</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <style>
+        .item {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .item .album img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .item .info .anchor {
+            color: #999;
+        }
+
+        .item .info p {
+            font-size: 15px;
+            margin-top: 8px;
+            cursor: pointer;
+
+            /* 显示一行
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; */
+
+            /* 显示多行 */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .item .info .anchor {
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .item .info .anchor::before {
+            content: url(../assets/images/bilibili列表/up.svg);
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            position: relative;
+            top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="album">
+            <img src="http://img.mp.sohu.com/q_mini,c_zoom,w_640/upload/20170720/a52400851214400cb57a52922469ff90_th.jpg"
+                alt="img" referrerpolicy="no-referrer">
+        </div>
+        <div class="info">
+            <p>萌化了!谁不喜欢毛茸茸的小懒懒呢?萌化了!谁不喜欢毛茸茸的小懒懒呢?萌化了!谁不喜欢毛茸茸的小懒懒呢?萌化了!谁不喜欢毛茸茸的小懒懒呢?萌化了!谁不喜欢毛茸茸的小懒懒呢?</p>
+            <a class="anchor">
+                <span class="nickname">chan</span>
+                <span class="time">3-20</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
