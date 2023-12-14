@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻列表练习</title>
+    <style>
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        ul, li, ol {
+            list-style: none;
+        }
+        .item:hover {
+            color: #f00;
+            cursor: pointer;
+        }
+        .item {
+            margin: 30px 0px;
+        }
+        ul > li > .ranking {
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #999;
+            text-align: center;
+        }
+        ul > li:nth-child(1) .ranking {
+            color: #f00;
+        }
+        ul > li:nth-child(2) .ranking {
+            color: #0f0;
+        }
+        ul > li:nth-child(3) .ranking {
+            color: #00f;
+        }
+        ul > li > .icon {
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+        ul > li > .new {
+            background: url(./assets/images/头条图标/hot.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        ul > li > .hot {
+            background: url(./assets/images/头条图标/hot.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="item">
+            <span class="ranking">1</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon new"></i>
+        </li>
+        <li class="item">
+            <span class="ranking">2</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon hot"></i>
+        </li>
+        <li class="item">
+            <span class="ranking">3</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon"></i>
+        </li><li class="item">
+            <span class="ranking">4</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon"></i>
+        </li><li class="item">
+            <span class="ranking">5</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon"></i>
+        </li><li class="item">
+            <span class="ranking">6</span>
+            <span class="content">
+                春花秋月何时了,往事知多少
+            </span>
+            <i class="icon"></i>
+        </li>
+    </ul>
+</body>
+</html>
