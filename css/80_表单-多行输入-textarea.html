@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+    <style>
+        textarea {
+            /* resize: none; */
+            /* 禁止拉伸 */
+            /* resize: horizontal; */
+            /* 水平拉伸 */
+            resize: vertical;
+            /* 垂直拉伸 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/abc">
+        <label for="ttext">建议</label>
+        <textarea name="suggestion" id="ttext" cols="10" rows="6"></textarea>
+        <input type="submit" value="提交建议">
+    </form>
+
+</body>
+
+</html>
