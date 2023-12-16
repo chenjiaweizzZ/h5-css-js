@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类补充</title>
+    <style>
+        .box {
+            margin: 20px;
+        }
+        /* 第一个 */
+        /* .box > div:first-child {
+            color: #f00;
+        } */
+        /* 最后一个 */
+        /* .box > div:last-child {
+            color: #f00;
+        } */
+        .box > div:only-child {
+            color: #f00;
+        }
+        .box > span:only-of-type {
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>我是div1</div>
+        <div>我是div2</div>
+        <div>我是div3</div>
+        <div>我是div4</div>
+        <div>我是div5</div>
+        <div>我是div6</div>
+        <div>我是div7</div>
+        <div>我是div8</div>
+        <div>我是div9</div>
+        <div>我是div10</div>
+    </div>
+    <div class="box">
+        <div>我是唯一的div</div>
+    </div>
+    <div class="box">
+        <div>我是其他的div</div>
+        <span>我是唯一的span</span>
+    </div>
+</body>
+</html>
