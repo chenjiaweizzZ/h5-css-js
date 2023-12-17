@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标的使用</title>
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url(./assets/fonts/font_54d92lb3g6/iconfont.ttf);
+        }
+
+        .iconfont-class {
+            font-family: "iconfont";
+            font-style: normal;
+            font-size: 100px;
+        }
+
+        .icon-Checked:before {
+            content: "\e62d";
+        }
+    </style>
+</head>
+
+<body>
+    <i class="iconfont-class">&#xe62d;</i>
+    <!-- 不使用字符实体 -->
+    <i class="icon-Checked iconfont-class"></i>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "38573859",
+      "name": "caret-left",
+      "font_class": "caret-left",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "38573860",
+      "name": "caret-right",
+      "font_class": "caret-right",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "38573861",
+      "name": "caret-top",
+      "font_class": "caret-top",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "38573863",
+      "name": "Checked",
+      "font_class": "Checked",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "38573875",
+      "name": "Promotion",
+      "font_class": "Promotion",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "38573876",
+      "name": "RemoveFilled",
+      "font_class": "RemoveFilled",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "38573880",
+      "name": "share",
+      "font_class": "share",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "38573881",
+      "name": "Ticket",
+      "font_class": "Ticket",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    }
+  ]
+}
