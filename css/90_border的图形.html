@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border的图形</title>
+    <style>
+        /* http://css.tricks.com/the-shapes-of-css/#top-of-site */
+        .box {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            /* border: 50px solid #0f0;
+            border-right-color: transparent;
+            border-bottom-color:  transparent;
+            border-left-color:  transparent; */
+            border: 50px solid transparent;
+            border-top-color: #0f0;
+            box-sizing: border-box;
+
+            /* 旋转 */
+            transform: rotate(180deg);
+            transform-origin: center 25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
