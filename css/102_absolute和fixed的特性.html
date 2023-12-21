@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute-绝对定位</title>
+    <!-- 定位参照的是最近的定位祖先元素
+    如果没有,则参照视口 -->
+    <style>
+        strong {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #0f0;
+            width: 300px;
+            height: 300px;
+        }
+        /* strong是一个行内非替换元素无法设置宽高,但是设置了position为absolute之后可以设置宽度和高度了,这个和行内块级元素没有关系,不可以混淆 */
+        /* 不再严格遵循从上到下从左到右的规则排布了,行内元素,块级元素,行内块级元素,行内替换元素,行内非替换元素的许多特性都会消失 */
+        /* 默认宽高由内容来决定 */
+        /* 拖标元素内的元素还是在标准文档流内 */
+        .box {
+            width: 800px;
+            height: 800px;
+            background: #f00;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .container {
+            height: 1000px;
+            width: 1000px;
+            background: #ff0;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <span>我是span元素</span>
+            <strong class="text">我是strong元素</strong>
+            <img src="./assets/images/bilibili列表/bilibili.PNG" alt="bilibili">
+            <div>我是div元素</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

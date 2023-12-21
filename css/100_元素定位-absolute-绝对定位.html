@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute-绝对定位</title>
+    <!-- 定位参照的是最近的定位祖先元素
+    如果没有,则参照视口 -->
+    <style>
+        strong {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 800px;
+            background: #f00;
+            position: relative;
+        }
+
+        .container {
+            height: 1000px;
+            width: 1000px;
+            background: #ff0;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <span>我是span元素</span>
+            <strong class="text">我是strong元素</strong>
+            <img src="./assets/images/bilibili列表/bilibili.PNG" alt="bilibili">
+            <div>我是div元素</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
