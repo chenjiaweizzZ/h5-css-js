@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位网易云音乐盒子</title>
+    <style>
+        .item {
+            cursor: pointer;
+            width: 140px;
+            margin: 0 auto;
+        }
+        .top img {
+            vertical-align: top;
+        }
+        .top {
+            position: relative;
+        }
+        .cover {
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            background-image: url(../assets/images/网易云音乐/coverall.png);
+            background-position: 0 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="top">
+            <img src="../assets/images/网易云音乐/109951164488282032.jpg" alt="cover">
+            <div class="cover"></div>
+        </div>
+        <div class="bottom">
+            车载嗨曲 开车靠的是感觉 不是眼睛
+        </div>
+    </div>
+</body>
+
+</html>
