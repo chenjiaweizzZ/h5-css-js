@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度的页码</title>
+    <style>
+        ul,li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul>li {
+            float: left;
+            background-color: #fff;
+            margin-left: 10px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #3951b3;
+        }
+        ul>li:hover {
+            background-color: blue;
+            color: #fff;
+        }
+        .active {
+            background-color: blue;
+            color: #fff;
+        }
+        body {
+            background-color: #f2f2f2;
+        }
+        .next {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="item active">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+        <li class="item">6</li>
+        <li class="item">7</li>
+        <li class="item">8</li>
+        <li class="item">9</li>
+        <li class="item">10</li>
+        <li class="item next">下一页</li>
+    </ul>
+</body>
+</html>

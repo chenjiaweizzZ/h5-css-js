@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度的页码</title>
+    <!-- 将多个行内元素中间的空行去除的方法 -->
+    <!-- 1.删除换行符(非常不推荐) -->
+    <!-- 2.将父级元素的fz设置为0,子元素的fz再设置一下(不是非常推荐) -->
+    <!-- 3.浮动 -->
+    <!-- 4.flex布局 -->
+    <style>
+        /* .box {
+            font-size: 0;
+        }
+        .box span {
+            background-color: #f00;
+            font-size: 14px;
+        } */
+
+        .box span {
+            float: left;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>111</span>
+        <span>222</span>
+        <span>333</span>
+    </div>
+</body>
+</html>
