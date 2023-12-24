@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动元素之间不能层叠</title>
+    <style>
+        .box {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+        }
+
+        .item1 {
+            float: left;
+            margin-left: 20px;
+            background-color: #0f0;
+        }
+
+        .item2 {
+            float: left;
+        }
+
+        .item3 {
+            float: left;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #00f;
+        }
+        .item4 {
+            background-color: #ccc;
+            width: 200px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1 box">浮动元素1</div>
+        <div class="item2 box">浮动元素2</div>
+        <div class="item3 box">浮动元素3</div>
+        <div class="item4 box">浮动元素4</div>
+    </div>
+
+</body>
+
+</html>
