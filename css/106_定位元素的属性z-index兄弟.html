@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位元素的属性z-index</title>
+    <style>
+        .box {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            background-color: #f00;
+        }
+
+        .item2 {
+            top: 20px;
+            left: 20px;
+            background-color: #ff0;
+            /* z-index: 1; */
+        }
+
+        .item3 {
+            top: 40px;
+            left: 40px;
+            background-color: #0f0;
+        }
+        .info {
+            position: absolute;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box item1">我是第1个box</div>
+    <div class="container">
+        <div class="box item2">
+            <div class="info">哈哈哈</div>
+        </div>
+    </div>
+
+    <div class="box item3">我是第3个box</div>
+</body>
+
+</html>
