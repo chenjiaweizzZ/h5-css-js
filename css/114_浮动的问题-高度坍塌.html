@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的问题-高度坍塌</title>
+    <style>
+        .content {
+            width: 1190px;
+            margin: 0 auto;
+        }
+
+        .item {
+            width: 290px;
+            background-color: #f00;
+            float: left;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .box {
+            margin-right: -10px;
+        }
+
+        .item.left {
+            height: 370px;
+        }
+
+        .item.right {
+            height: 180px;
+        }
+        .other {
+            height: 100px;
+            background-color: #00f;
+        }
+        .line {
+            clear: both;
+            height: 200px;
+            background-color: #ff0;
+        }
+        /* 最终解决方案 */
+        .clear-float::after {
+            display: block;
+            content: '';
+            clear: both;
+            visibility: hidden;
+            height: 0;  
+        }
+        /* .clear-float {
+            *zoom: 1;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="box clear-float">
+            <div class="item left"></div>
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <div class="item right"></div>
+            <!-- <div class="line"></div> -->
+            <!-- clear元素可以指定一个元素是否必须移动(清除浮动)到在他之前的浮动元素的下面 -->
+        </div>
+    </div>
+    <!-- content没有高度,所以other会直接在视口最上面显示 -->
+    <div class="other">
+    </div>
+</body>
+
+</html>
