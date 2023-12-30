@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>justify-content</title>
-    <style>
-        /* justify-content */
+    <!-- /* justify-content */
         /* flex-start 与main start对齐*/
         /* flex-end 与main end对齐 */
         /* center  居中 */
         /* space-between  与main-start和main-end对齐 中间的item平分 */
         /* space-around  item到main-start和main-end之间的距离是item之间距离的一半 */
-        /* space-evenly  item到main-start和main-end之间的距离是item之间的距离 */
+        /* space-evenly  item到main-start和main-end之间的距离是item之间的距离 */ -->
+        <!-- 实际开发中父元素盒子不会设置固定的高度,所以item的align-content: flex-start是默认的 -->
+    <style>
         .container {
             width: 500px;
             height: 500px;
-            background-color: #f00;
+            background-color: #f00; 
             display: flex;
+            flex-flow: wrap;
+            align-content: space-between;
         }
 
         .item {
-            width: 120px;
+            width: 120px; 
             height: 120px;
             background-color: #ff0;
         }
+        
     </style>
 </head>
 <body>
@@ -31,10 +35,13 @@
        <div class="item item1">1</div>
        <div class="item item2">2</div>
        <div class="item item3">3</div>
-       <!-- <div class="item item4">4</div>
+       <div class="item item4">4</div>
        <div class="item item5">5</div>
        <div class="item item6">6</div>
-       <div class="item item7">7</div> -->
+       <div class="item item7">7</div>
+       <div class="item item8">8</div>
+       <div class="item item9">9</div>
+       <div class="item item10">10</div>
     </div>
     <script src="./style/itemRandomColor.js"></script>
 </body>
