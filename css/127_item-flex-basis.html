@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis</title>
+    <!-- 扩展尺寸,但是大部分情况下flex-basis和width是一样的 -->
+    <!-- 默认情况下flex-basis为auto -->
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #f00; 
+            display: flex;
+        }
+
+        .item {
+            flex-basis: 120px;
+            /* width: 120px;  */
+            height: 120px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item item1">1</div>
+       <div class="item item2">我的名字叫陈家伟哈哈哈哈hahahahahahahahha1</div>
+       <div class="item item3">3</div>
+    </div>
+    <script src="./style/itemRandomColor.js"></script>
+</body>
+</html>

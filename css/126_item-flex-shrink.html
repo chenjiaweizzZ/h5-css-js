@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>justify-content</title>
-    normal stretch
-    <!-- flex-start 与cross start对齐 item的高度为auto时候,把item的高度拉伸和container一样高
-    flex-end 与cross end对齐
-    center 居中对齐
-    baseline 与基线对齐 -->
+    <title>flex-shrink</title>
+    <!-- flex-shrink的默认值是1 -->
+    <!-- 设置为0不希望被压缩 -->
     <style>
         .container {
             width: 500px;
             height: 500px;
             background-color: #f00; 
             display: flex;
-            align-items: stretch;
         }
 
         .item {
             width: 120px; 
-            /* height: 120px; */
-            background-color: #ff0;
-            /* height: auto; */
+            height: 120px;
+            flex-shrink: 0;
         }
-        /* .item1 {
-            height: 200px;
+
+        .item1 {
+            flex-shrink: 1;
+            /* 全部压缩给1 */
         }
-        .item2 {
-            height: 250px;
-        }
-        .item3 {
-            height: 100px;
-        } */
+
+
+        /* order的默认值为0 */
     </style>
 </head>
 <body>
@@ -40,6 +34,8 @@
        <div class="item item1">1</div>
        <div class="item item2">2</div>
        <div class="item item3">3</div>
+       <div class="item item4">4</div>
+       <div class="item item5">5</div>
     </div>
     <script src="./style/itemRandomColor.js"></script>
 </body>

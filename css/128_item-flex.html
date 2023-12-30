@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <!-- flex是flex-grow || flex-shrink || flex-basis的简写属性 -->
+    <!-- flex可以指定一个 两个 或者  三个值  -->
+    <!-- flex: none => flex: 0 0 auto -->
+    <!-- flex: auto => flex: 1 1 auto -->
+    <!-- flex: 1 => flex: 1 1 auto  设置一个值之后如果没有单位就是flex-grow 如果有单位就是flex-basis -->
+    <!-- flex: 1 0 => flex: 1 0 auto 设置两个值之后第二个值没有单位就是flex-grow和flex-shrink 如果有单位就是flex-grow和flex-basis -->
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: #f00; 
+            display: flex;
+        }
+
+        .item {
+            height: 120px;
+            width: 120px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item item1">1</div>
+       <div class="item item2">2</div>
+       <div class="item item3">3</div>
+    </div>
+    <script src="./style/itemRandomColor.js"></script>
+</body>
+</html>

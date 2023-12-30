@@ -4,35 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>justify-content</title>
-    normal stretch
-    <!-- flex-start 与cross start对齐 item的高度为auto时候,把item的高度拉伸和container一样高
-    flex-end 与cross end对齐
-    center 居中对齐
-    baseline 与基线对齐 -->
+    <!-- flex-grow的默认值是0 -->
+    <!-- 也可以设置为小数 -->
+    <!-- 不可以为负数 -->
     <style>
         .container {
             width: 500px;
             height: 500px;
             background-color: #f00; 
             display: flex;
-            align-items: stretch;
         }
 
         .item {
             width: 120px; 
-            /* height: 120px; */
-            background-color: #ff0;
-            /* height: auto; */
+            height: 120px;
+            flex-grow: 1;
         }
-        /* .item1 {
-            height: 200px;
+
+        .item1 {
+            flex-grow: 2;
         }
-        .item2 {
-            height: 250px;
-        }
-        .item3 {
-            height: 100px;
-        } */
+
+        /* order的默认值为0 */
     </style>
 </head>
 <body>

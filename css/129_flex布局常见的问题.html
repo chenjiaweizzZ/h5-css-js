@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>justify-content</title>
-    normal stretch
-    <!-- flex-start 与cross start对齐 item的高度为auto时候,把item的高度拉伸和container一样高
-    flex-end 与cross end对齐
-    center 居中对齐
-    baseline 与基线对齐 -->
+    <title>flex布局常见的问题以及解决方法</title>
+    <!-- 列数减少2 -->
     <style>
         .container {
             width: 500px;
             height: 500px;
             background-color: #f00; 
             display: flex;
-            align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .item {
-            width: 120px; 
-            /* height: 120px; */
-            background-color: #ff0;
-            /* height: auto; */
+            height: 120px;
+            width: 120px;
         }
-        /* .item1 {
-            height: 200px;
+
+        .container>span {
+            width: 120px;
         }
-        .item2 {
-            height: 250px;
-        }
-        .item3 {
-            height: 100px;
-        } */
+
     </style>
 </head>
 <body>
@@ -40,6 +31,15 @@
        <div class="item item1">1</div>
        <div class="item item2">2</div>
        <div class="item item3">3</div>
+       <div class="item item1">1</div>
+       <div class="item item2">2</div>
+       <div class="item item3">3</div>
+       <div class="item item1">1</div>
+       <div class="item item2">2</div>
+       <div class="item item3">3</div>
+       <div class="item item1">1</div>
+       <span></span>
+       <span></span>
     </div>
     <script src="./style/itemRandomColor.js"></script>
 </body>
