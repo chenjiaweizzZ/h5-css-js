@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米智能穿戴设备</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/common.css">
+    <style>
+        .header {
+            height: 58px;
+            line-height: 58px;
+        }
+        .dress .header .left-area {
+            float: left;
+        }
+        .dress {
+            width: 1240px;
+            margin: 0 auto;
+        }
+        .dress .header .right-area {
+            float: right;
+        }
+        .left-area {
+            cursor: pointer;
+        }
+        .right-area>span {
+            cursor: pointer;
+        }
+        .dress>.header>.right-area>.item {
+            margin-left: 15px;
+        }
+        .dress>.header>.right-area>.item:hover,
+        .dress>.header>.right-area>.item:active {
+            padding: 3px 0;
+            border-bottom: 2px solid #f00;
+            color: #f00;
+            box-sizing: border-box;
+        }
+        .list {
+            width: 1240px;
+            margin: 0 auto;
+        }
+        .list .item {
+            float: left;
+            width: 234px;
+            height: 300px;
+            margin-right: 14px;
+            margin-bottom: 14px;
+            background-color: #f00;
+            transition: all 0.2s ease-in;
+            position: relative;
+            top: 0;
+        }   
+        .list .item1 {
+            height: 614px;
+        }
+        .list .item9,.list .item10 {
+            height: 143px;
+        }
+        .list .item {
+            cursor: pointer;
+        }
+        .list .item:hover {
+            box-shadow: 0 10px 15px rgba(255, 0, 0, 1);
+            /* position: relative;
+            top: -2px; */
+            transform: translateY(-2px);
+        }
+    </style>
+</head> 
+<body>
+    <div class="mi_wrapper dress">
+        <div class="header clear_fix">
+            <div class="left-area" >
+                <h3>智能穿戴</h3>
+            </div>
+            <div class="right-area">
+                <span class="item hot">热门</span>
+                <span class="item wear">穿戴</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul class="list">
+            <li class="item item1">1</li>
+            <li class="item item2">2</li>
+            <li class="item item3">3</li>
+            <li class="item item4">4</li>
+            <li class="item item5">5</li>
+            <li class="item item6">6</li>
+            <li class="item item7">7</li>
+            <li class="item item8">8</li>
+            <li class="item item9">9</li>
+            <li class="item item10">10</li>
+        </ul>
+    </div>
+</body>
+</html>

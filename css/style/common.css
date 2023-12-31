@@ -1,0 +1,8 @@
+.clear_fix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
