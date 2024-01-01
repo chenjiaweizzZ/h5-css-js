@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line-height</title>
+    <!-- line-height会被子元素继承 -->
+    <!-- line-height对span(行内非替换元素)撑不起来 -->
+    <!-- 需要把span设置为块级元素或者行内块级元素 -->
+    <style>
+        .box {
+            background-color: #f00;
+            color: #ff0;
+            line-height: 50px;
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <span class="box">
+        哈哈哈
+    </span>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素中嵌套img</title>
+    <!-- 默认情况下放入块级元素中的行内元素(img行内替换元素)默认情况下是基线(x-line的最底部vertical-align:baseline)对齐的 -->
+    <!-- 解决方法
+    1.把img设置为vertical-align: top bottom middle;
+    2.把图片设置为块级元素 -->
+    <style>
+        .box {
+            background-color: #ff0;
+        }
+        .box>img {
+            /* vertical-align: top; */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        123
+        <img src="./assets/images/网易云音乐/banner1.jpg" alt="banner">
+    </div>
+</body>
+</html>
