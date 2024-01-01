@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing无作用的场景(flex)</title>
+    <style>
+        
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+            display: flex;
+        }
+        /* div里的div元素的高度也是auto,默认是自动撑起全部 */
+        .box {
+            width: 100px;
+            background-color: #ff0;
+            border-top: 10px solid #0f0;
+        }
+        .box2 {
+            flex: 1;
+            /* flex-grow: 1; */
+            border: 10px solid #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
