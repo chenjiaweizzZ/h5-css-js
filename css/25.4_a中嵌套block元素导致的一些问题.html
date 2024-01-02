@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a中嵌套block</title>
+    <style>
+        a {
+           background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <!-- 规范 行内非替换元素中不要嵌套块级元素 -->
+    <!-- 违背了历史上元素设置的最初的一些定义 -->
+    <!-- 如果要把块级元素嵌入行内元素的话会发生一些神经的事情 -->
+    <a href="">
+        <div>divdivdivdivdiv</div>
+        <span>spanspanspanspanspan</span>
+        <p>pppppppppppppppppppppp</p>
+    </a>
+    <!-- 宽高不是a的宽高 -->
+    <!-- 推荐把a改成inline-block -->
+</body>
+</html>
