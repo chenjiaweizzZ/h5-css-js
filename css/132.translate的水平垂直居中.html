@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平垂直居中</title>
+    <style>
+        .container {
+            height: 300px;
+            background-color: #ff0;
+        }
+        .box {
+            background-color: #f00;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 50%;
+            /* margin-top: 50%; */
+            /* margin-top百分比是相对于父元素的宽度 */
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        /* 让元素向下位移父元素的50%
+        让元素向上位移自身的50% */
+    </style>
+</head>
+<body>
+    <!-- 水平居中
+    行内元素 设置  父元素  text-align:center
+    块级元素 设置当前块级元素 margin: 0 auto
+    绝对定位 元素有宽度的情况下 leff:0 right:0 margin: 0 auto
+    flex布局  justify-content: center
+
+    垂直居中
+    绝对定位  元素有高度的情况下 top: 0 bottom: 0 margin: auto 0  (必须使用定位,脱离标准文档流)
+    flex  align-items: center  -->
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

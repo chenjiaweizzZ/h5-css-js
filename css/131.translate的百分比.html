@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate的百分比</title>
+    <style>
+        .container {
+            display: inline-block;
+            border: 5px solid #f00;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ff0;
+            transform: translate(100%,100%);
+            /* 百分比?你的百分比相对谁 */
+            /* translate的百分比是相对于自身的 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body> 
+</html>
