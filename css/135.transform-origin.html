@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform- origin</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 200px;
+        }
+        .container {
+            display: inline-block;
+            border: 10px solid #f00;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #ff0;
+            /* 修改当前元素形变的原点位置 */
+            /* 默认值center center */
+            /* transform-origin: left top; */
+            transform-origin: 100px 100px; 
+            /* 设置一个值是设置x轴的原点 */
+        }
+        .box:hover {  
+            /* transform: rotate(45deg);
+            transform: scale(.5,.5); */
+            /* 写两个transform只有下面的transform会生效 */
+            transform: rotate(45deg) scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

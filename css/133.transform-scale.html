@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scale(x,y)</title>
+    <!-- 缩放 -->
+    <style>
+        .container {
+            height: 200px;
+            width: 200px;
+            border: 1px solid #ff0;
+            margin: 200px auto;
+        }
+        .box {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            background-color: #f00;
+            /* transform: scale(0.6,0.9);  */
+            /* 具体的不带单位的值 */
+        }
+        .box:hover {
+            transform: scale(.5,.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
