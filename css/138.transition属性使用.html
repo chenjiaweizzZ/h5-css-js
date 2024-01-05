@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .container {
+            background-color: #ff0;
+        }
+        .box {
+            position: relative;
+            /* left: 0; */
+            transform: translate(0px);
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            /* 告知浏览器box在在进行一些css变化时候有一个过度效果 */
+            /* transition-property: left; */
+            /* transition-property: transform; */
+            /* transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: .5s; */
+            transition: all 1s ease-in .5s;
+        }
+        .container:hover .box {
+            /* left: 100px; */
+            transform: translate(100px);
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
