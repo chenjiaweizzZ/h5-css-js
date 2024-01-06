@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素中img的底部像素 </title>
+    <style>
+        .box {
+            background-color: #f00;
+        }
+        .box>img {
+            /* vertical-align: bottom; */
+            /* 基线底部对齐 */
+            display: block;
+            /* 直接独占一行 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./assets/images/星球介绍/地球.jpeg" alt="">
+    </div>
+</body>
+</html>
