@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内中的多种行内元素</title> 
+    <style>
+        .box {
+            background-color: #f00;
+        }
+        .small {
+            display: inline-block;
+            height: 200px;
+            width: 100px;
+            background-color: #ff0;
+            vertical-align: top;
+        }
+        .box>img {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        我是一个普通文本
+        <img src="./assets/images/星球介绍/地球.jpeg" alt="">
+        <span class="small"></span>
+        xxxxxxxxxxxxxx
+        <!-- 当以个inline-box中有文本时,它的基线就转变为最后一行的文本的基线 -->
+    </div>
+</body>
+</html>
