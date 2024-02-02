@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white-space</title>
+    <style>
+        .box {
+            width: 200px;
+            background-color: aqua;
+
+            /* white-space: normal; */
+            /* 合并所有空白,并且允许单词超过屏幕是时自动换行 */
+            /* white-space: nowrap */
+            /* 合并所有连续的空白,不允许单词超过屏幕时候自动换行 */
+            /* white-space: pre; */
+            /* 阻止合并空白,不允许单词超过屏幕时自动换行 */
+            white-space: pre-wrap;
+            /* 组织合并所有连续的空白,允许单词超过屏幕时自动换行 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        afihaufbiahfainfha                                                   afhakfafia           afnaifnafma
+    </div>
+</body>
+</html>
