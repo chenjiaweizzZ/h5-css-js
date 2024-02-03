@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var</title>
+    <style>
+        html {
+            /* 定义一个html属性,只有后代元素可是使用 */
+            --main-color: #13d232
+        }
+        .box {
+            color: var(--main-color);
+        }
+        .title {
+            color: var(--main-color)
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+    <div class="title">
+        title
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC解决浮动高度坍塌问题</title>
+    <style>
+        .container {
+            background-color: aqua;
+        }
+        .item {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            float: left;
+            background-color: brown;
+            /* 绝对定位 position:absoulte 父元素也获取不到高度 */
+        }
+        .clear-fix::after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- container无高度 -->
+    <div class="container clear-fix">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

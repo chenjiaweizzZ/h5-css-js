@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC解决浮动高度坍塌问题</title>
+    <style>
+        .container {
+            background-color: aqua;
+            overflow: auto;
+            /* BFC解决高度坍塌需要满足两个条件 */
+            /* 1. 浮动元素的父元素触发BFC,形成独立的块级格式化上下文(Blocking Formatting Context) */
+            /* 2. 浮动元素的父元素的的高度是auto */
+            /* BFC是块级元素的布局环境 */
+        }
+        .item {
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            float: left;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

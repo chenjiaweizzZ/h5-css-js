@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style>
+        .box {
+            width: 600px;
+            background-color: red;
+            height: 200px;
+        }
+        .item {
+            height: 200px;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        .item1 {
+            width: 200px;
+            background-color: aquamarine;
+        }
+        .item2 {
+            /* width的百分比相对于包含块,父元素 */
+            /* -符号两边一定要留空格 */
+            width: calc(100% - 200px);
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 中间有个空格 -->
+        <span class="item item1"></span><span class="item item2"></span>
+    </div>
+</body>
+</html>
