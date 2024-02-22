@@ -1,0 +1,37 @@
+.border-box {
+    border: 5px solid #f00;
+}
+
+.box {
+    // .border-box()
+    &:extend(.border-box);
+}
+
+// 内置函数
+.box2 {
+    color: color(skyblue);
+    // width: 100px;
+    width: convert(100px,'in');
+    // font-size: floor(18.5px);
+    font-size: ceil(18.5px);
+    background: #f00;
+}
+
+// 作用域
+@mianColor: #f00;
+.box {
+    @mainColor: #0f0;
+    .item {
+        span {
+            @mainColor: #00f;
+            color: @mainColor;
+        }
+    }
+}
+
+// 注释
+// 单行注释
+/* 
+多行注释
+多行注释
+*/
