@@ -1,0 +1,17 @@
+.pxToRem(@widthPx,@heightPx) {
+    width: 1rem * (@widthPx / 37.5);
+    height: 1rem * (@heightPx / 37.5);
+}
+
+.pxToRem2(@px) {
+    result: 1rem * (@px / 37.5);
+}
+
+.box {
+    // .pxToRem(100,100);           //混入
+    height: .pxToRem2(100)[result];
+    width: .pxToRem2(100)[result];   //映射
+    // width: 2.6rem;
+    // height: 2.6rem;
+    background-color: blue;
+}
