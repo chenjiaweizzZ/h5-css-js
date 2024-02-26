@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写javascript的位置</title>
+</head>
+<body>
+    <!-- 1、编写位置html内部 -->
+    <!-- <div onclick="alert('百度一下')">百度一下</div> -->
+
+    <!-- 2、编写在script内元素之中 -->
+    <!-- <div class="baidu">百度一下</div>
+    <script>
+        var baiduEl = document.querySelector(".baidu")
+        baiduEl.onclick = function() {
+            alert("百度一下")
+        }
+    </script> -->
+
+    <!-- 3、独立的js文件 -->
+    <div class="baidu">百度一下</div>
+    <script src="./js/01_编写javascript的位置.js"></script>
+</body>
+</html>
