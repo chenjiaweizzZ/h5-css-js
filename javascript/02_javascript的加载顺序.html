@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript的加载顺序</title>
+</head>
+
+<body>
+    <!-- <script>
+        var h1El = document.querySelector(".hahaha")
+        alert(h1El)
+    </script> -->
+    <!-- 输出null -->
+
+    <h1 class="hahaha">哈哈哈哈</h1>
+    <!-- <script>
+        var h1El = document.querySelector(".hahaha")
+        alert(h1El)
+    </script> -->
+    <!-- script要放在最后 -->
+</body>
+<script>
+    var h1El = document.querySelector(".hahaha")
+    alert(h1El)
+</script>
+<!-- 也可以放在body外面 -->
+</html>
