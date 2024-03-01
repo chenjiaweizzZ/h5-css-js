@@ -5,6 +5,7 @@
  */
 function sayHello(name,age) {
     console.log(name,age)
+    console.log(`output->`,name,age)
 }
 
 // html文件里没有这样的提示
