@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object和null</title>
+</head>
+<body>
+    <script>
+        var person = {
+            name: "chanjiawei",
+            age: 18
+        }
+        // console.log(person)
+        // console.log(person.name)
+
+        var age = 0;
+        var desc = "";
+        var isAdmin = false;
+        var student = {}
+        if(student) {
+            console.log("student",typeof student)
+        }
+        //初始化{},转为boolean类型时候是为true
+        //当对一个对象类型进行初始化的时候,不建议初始化为{}(堆内存创建了对象),建议初始化为null(0x0)
+        //null存在的意义就是对对象进行初始化 var book = null
+    </script>
+</body>
+</html>
