@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转化-number</title>
+</head>
+<body>
+    <script>
+        //隐式转化 在算数中(除了 + 运算符),一般会把其他类型转化成数字类型再运算
+        var a = "6"
+        var b = "2"
+        console.log(a / b)
+
+        //显式转化  Number
+        // undefined => NaN
+        // numm => 0
+        // true false => 0 1
+        // string => 去掉首尾空格后的纯数字字符串含有的数字 如果是空字符串则返回0  否则将会从剩余数字中读取数字 当类型转化出现error时，则返回NaN
+        var string = "12"
+        var string2 = "abc123abc"
+        var num = Number(string)
+        var num2 = Number(string2)
+        console.log(typeof num)
+        console.log(num2)
+    </script>
+</body>
+</html>

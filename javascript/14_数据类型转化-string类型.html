@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转化-string类型</title>
+</head>
+<body>
+    
+    <script>
+        // 隐式转化(使用很多) 一个字符串+别的类型,那么别的类型转换成字符串
+        var name = "陈家伟"
+        var age = 23
+        var isAdmin = false
+        var string1 = name + age
+        var string2 = "" + age
+        var string3 = name + isAdmin
+        console.log(typeof string1,typeof string2, typeof string3)
+        //一些函数的执行也会把内容转换成字符串
+        console.log(isAdmin)
+
+        //显式转化
+        var num = 1
+        var num2 = String(num)
+        console.log(typeof num2)
+    </script>
+</body>
+</html>

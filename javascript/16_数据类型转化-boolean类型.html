@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转化-boolean类型</title>
+</head>
+<body>
+    <script>
+        // 隐式转化 分支语句
+        // 直观上为空的值 转为boolean类型时为false  0 "" null undefined {} [] NaN  => false
+        var isAdmin = true
+        var num = 1
+        var string = "123"
+        var object = {
+            name: "chenjiawei"
+        }
+        if(num && string && isAdmin && object) {
+            console.log("true")
+        }
+    </script>
+</body>
+</html>
