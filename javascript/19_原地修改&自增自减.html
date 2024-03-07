@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原地修改</title>
+</head>
+<body>
+    <script>
+        var num = 10
+        // num = num + 10
+        num += 10
+        num *= 10
+        num **= 2
+        console.log(num)
+        var num1 = 10
+        num1++ 
+        // num1--
+        console.log(num1) 
+        var num2 = 20
+        ++num2
+        --num2
+        console.log(num2)
+        // 自增自减如果在其他的表达式中,则会有区别
+        var currentIndex1 = 1
+        var currentIndex2 = 1
+        var result1 = 100 + currentIndex1++  //101 先相加,再自增
+        console.log(result1,currentIndex1)
+        var result2 = 100 + ++currentIndex2  //103 先自增,再相加
+        console.log(result2,currentIndex2)
+    </script>
+</body>
+</html>
