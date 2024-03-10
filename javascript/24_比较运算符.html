@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+<body>
+    <script>
+        var info = {
+            name: "chenjiawei",
+            age: 23,
+            [Symbol.toPrimitive]() {
+                return 123
+            }
+        }
+        console.log(info == 123)
+
+    </script>
+</body>
+</html>
