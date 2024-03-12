@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑与的本质</title>
+</head>
+<body>
+    <script>
+        // 条件1 && 条件2 && 条件3
+        // 从第一个运算元开始转成boolean类型
+        // 对运算元的boolean类型进行判断
+        // 如果是true, 查找下一个来运算,如果都为true,那么返回最后一个运算元(原始值)
+        // 如果是false, 返回运算元(原始值)
+
+        var chineseScore = 80
+        var mathScore = 99
+        if(chineseScore > 90 && mathScore > 90) {}
+
+        //对一些对象中的方法进行有值判断
+
+        var obj = {
+            name: "陈家伟",
+            friend: {
+                name: "陈小伟",
+                eating: function() {
+                    console.log("eating something")
+                }
+            }
+        }
+        //虽然可以调用,但是比较危险,如果friend不存在,那么直接返回undefined,那么调用undefined.eating方法,非常不严谨
+        // obj.friend.eating()
+
+        obj && obj.friend && obj.friend.eating && obj.friend.eating()
+
+    </script>
+</body>
+</html>
