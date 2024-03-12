@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑或的本质</title>
+</head>
+<body>
+    <script>
+        // 条件1 || 条件2 || 条件3 可以脱离分支语句,单独使用逻辑或(短路或)
+        // 运算元1 || 运算元2 || 运算元3 
+        // 先将运算转成boolean类型,如果为true,就直接将结果(元结果)返回,如果找到最后也没有找到为boolean值为true的运算元,则返回最后一个运算元
+        var chineseScore = 95
+        var mathScore = 88
+        // chineseScore > 90为true,那么后续的条件都不会进行了,即可以被认为短路了
+        if(chineseScore > 90 || mathScore > 90) {}
+
+        function foo(name) {
+            console.log(name || "未输入name")
+        }
+        foo("陈家伟")
+        foo()
+    </script>
+</body>
+</html>
