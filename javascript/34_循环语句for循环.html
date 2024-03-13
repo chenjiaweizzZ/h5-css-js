@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环语句for循环</title>
+    <style>
+        div {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // for (begin; condition; step) {
+        //     循环代码块
+        // }
+        //begin只会执行一次,每次检查condition之后,执行body和step
+        // for(var i = 0; i < 3; i ++) {
+        //     console.log(i)
+        // }
+
+        //打印10次hello world
+        // for(var i = 0; i < 10; i++) {
+        //     console.log("hello world")
+        // }
+
+        //打印0~99的数字
+        // for(var i = 0; i < 100; i ++) {
+        //     console.log(i)
+        // }
+
+        for (var i = 0; i < 6; i ++) {
+            document.write("<div>")
+                for (var j = 0; j < 6; j ++) {
+                    document.write("❤")
+                }
+            document.write("</div>")
+        }
+    </script>
+</body>
+</html> 
