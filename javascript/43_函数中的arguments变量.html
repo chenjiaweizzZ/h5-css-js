@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+        function foo(name, age) {
+            // console.log(name, age)
+            console.log(typeof arguments)  // argument的类型是一个对象(类数组)
+            console.log(arguments)  // 对象内部包含了所有传入的参数
+            for (var i = 0; i < arguments.length; i++){
+                console.log(arguments[i])
+            }
+        }
+
+        function sum() {
+            for (var i = 0; i < arguments.length; i++){
+                console.log(arguments[i])
+            }
+        }
+
+        foo("陈家伟",25)
+        sum(1,23,7,8)
+    </script>
+</body>
+</html>

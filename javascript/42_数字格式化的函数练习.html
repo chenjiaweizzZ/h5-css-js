@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字格式化的函数练习</title>
+</head>
+<body>
+    <script>
+        var playCount = 12367   //12367
+        var playCount2 = 5433322  //543万
+        var playCount3 = 8766633333  //87亿
+
+        function formatCount(count) {
+            if ( count >= 10_0000_0000 ) {
+                count = Math.floor(count / 1_0000_0000) + "亿"
+            } else if (count >= 10_0000) {
+                count = Math.floor(count / 1_0000) + "万"
+            }
+            return count
+        }
+
+        console.log(formatCount(playCount))
+        console.log(formatCount(playCount2))
+        console.log(formatCount(playCount3))
+
+    </script>
+</body>
+</html>
