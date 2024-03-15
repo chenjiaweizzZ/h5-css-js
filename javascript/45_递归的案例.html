@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递归的案例</title>
+</head>
+<body>
+    <script>
+        function pow(x, n) {
+            var result = 1
+            for (var i = 0; i < n; i ++) {
+                result *= x
+            }
+            return result
+        }
+        // console.log(pow(2, 3))
+        function pow2(x, n) {
+            if(n == 1) return x
+            return x * pow(x, n-1)
+        }
+        var result = pow(2, 3)
+        console.log(result)
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域的概念</title>
+</head>
+<body>
+    <script>
+
+        //在script声明的变量,那么这个变量是一个全局变量
+
+        //message 在哪一个范围内可以被使用,称之为message的作用域
+        //全局变量: 全局作用域
+
+        // var message = "hello world"  
+        // if(true) {
+        //     console.log(message)
+        // }
+        // function foo() {
+        //     console.log("message:",message)
+        // }
+        // foo()
+        var nickName = "陈家家"
+        function sayHello() {
+            var nickName = "陈家伟" //局部变量 在函数内部定义的变量,只有在函数内部才可以进行访问,称之为局部变量
+            function sayHi() {
+                console.log(nickName)  //优先访问最近的作用域里的变量
+            }
+            sayHi()
+        }
+        sayHello()
+    </script>
+</body>
+</html>
