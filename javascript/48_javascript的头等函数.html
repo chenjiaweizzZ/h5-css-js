@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript的头等函数</title>
+</head>
+<body>
+    <script>
+        // 函数作为一等公民
+        // 函数可以被赋值给变量(函数表达式写法)
+        var foo1 = function() {
+            console.log("top")
+        }
+        // foo1()
+        var foo2 = foo1
+        //函数在变量之间传递
+        // foo2()
+
+        //函数可以作为另外一个函数的参数
+        function bar(fn) {
+            console.log("fn",fn)
+            fn()
+        }
+        bar(foo1)
+    </script>
+</body>
+</html>
