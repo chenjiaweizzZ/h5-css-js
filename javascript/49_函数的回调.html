@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的回调</title>
+</head>
+
+<body>
+    <script>
+        function foo(fn) {
+            // 通过foo调用bar的过程成为函数的回调
+            fn()
+        }
+        function bar() {
+            console.log("bar")
+        }
+        // foo(bar)
+
+        // 函数回调的案例
+        function request(url, callback) {
+            //根据url向服务请求结果,但是需要很长的时间
+            var list = []
+            setTimeout(() => {
+                list = [1, 2, 3]
+                callback(list)
+            },1000)
+            // return list //返回结果为undefined
+            
+        }
+
+        function handleResult(list) {
+            console.log(list)
+        }
+
+        request("http://www.baidu.com", handleResult)
+
+        request("http://www.baidu.com", function(res) {  //匿名函数
+            console.log(res)
+        })
+
+    </script>
+</body>
+
+</html>
