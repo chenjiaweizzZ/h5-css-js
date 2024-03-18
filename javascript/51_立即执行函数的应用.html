@@ -6,12 +6,16 @@
     <title>立即执行函数的应用</title>
 </head>
 <body>
+    <script src="./js/xiaohong.js"></script>
+    <script src="./js/xiaoming.js"></script>
+    <script src="./js/xiaohong2.js"></script>
+    <!-- message被污染了 -->
     <script>
         // 在立即执行函数中定义的变量是有自己的作用域的
-        (function() {
-            var message = "hello world"
-        })()
-        console.log(message)
+        // (function() {
+        //     var message = "hello world"
+        // })()
+        // console.log(message)   //mesasge被污染
 
         //防止全局变量的命名冲突
 
