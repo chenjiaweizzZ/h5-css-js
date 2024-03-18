@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数的应用</title>
+</head>
+<body>
+    <script>
+        // 在立即执行函数中定义的变量是有自己的作用域的
+        (function() {
+            var message = "hello world"
+        })()
+        console.log(message)
+
+        //防止全局变量的命名冲突
+
+    </script>
+</body>
+</html>
