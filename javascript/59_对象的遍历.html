@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的遍历</title>
+</head>
+<body>
+    <script>
+        // Object.keys()方法会返回一个由一个给定对象的自身可枚举属性组成的数组
+        var info = {
+            name: "陈家伟",
+            age: 18,
+            height: 1.88
+        }
+        var infoKeys = Object.keys(info)
+        for (var i = 0; i < infoKeys.length; i++) {
+            var key = infoKeys[i]
+            var value = info[key]
+            console.log(`${key}:${value}`)
+        }
+        // for .. in .. 
+        for (var key in info) {
+            // debugger
+            var value = info[key]
+            console.log(`${key}:${value}`)
+        }
+        // for .. of ..默认不能遍历对象  info is not iterable
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象中方括号的使用</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "陈家伟",
+            "my friend": "陈小伟",
+            "coding coding": function() {
+                console.log("coding")
+            }
+        }
+        console.log(obj["my friend"])
+        console.log(obj["name"])
+        obj["coding coding"]()
+        var key = "coding coding"
+        obj[key]()
+    </script>
+</body>
+</html>

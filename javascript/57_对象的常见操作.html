@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的常见操作</title>
+</head>
+<body>
+    <script>
+        var info = {
+            name: "陈家伟",
+            age: 24,
+            friend: {
+                name: "陈小伟",
+                age: 24
+            },
+            coding: function() {
+                console.log("coding")
+            }
+        }
+        //访问对象中的属性
+        console.log(info.name,info.age,info.friend.name)
+        info.coding()
+        //修改对象中的属性
+        info.age = 23
+        info.coding = function() {
+            console.log("coding2")
+        } 
+        console.log(info.name,info.age,info.friend.name)
+        info.coding()
+        //添加对象中的属性
+        info.height = 175
+        console.log(info.height + "cm")
+        //删除对象中的属性 delete
+        delete info.height
+        console.log(info)
+    </script>
+</body>
+</html>
