@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this在开发中的使用</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "陈家伟",
+            coding: function() {
+                console.log(this.name + "is coding")
+            }
+        }
+        obj.coding() // 通过调用对象,this指向调用的对象
+    </script>
+</body>
+</html>

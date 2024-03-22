@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数中的this</title>
+</head>
+<body>
+    <script>
+        //函数中除了存在一个arguments变量,还有一个this变量,this变量在大多数情况下会指向一个变量
+        //除了箭头函数,任何一个函数中都有this
+        function foo(name, age) {
+            console.log(arguments)
+            console.log(this)
+        }
+        foo("陈家伟",23)
+
+        //如果函数他是被一个对象引用并且调用它,那么this会指向这个对象
+        var obj = {
+            name: "陈家伟",
+            coding: function() {
+                console.log(this)
+                console.log(obj === this)
+            }
+        }
+        obj.coding()
+    </script>
+</body>
+</html>

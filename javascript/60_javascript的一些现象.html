@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript的一些现象</title>
+</head>
+<body>
+    <script>
+        var num1 = 123
+        var num2 = 123
+        console.log(num1 === num2)
+
+        //两个对象的比较
+        var obj1 = {}   // 0x100 内存地址
+        var obj2 = {}   // 0x200 内存地址
+        console.log(obj1 === obj2)
+
+        //引用的赋值
+        var info = {
+            name: "陈家伟",
+            friend: {
+                name: "陈小伟"   //在堆内存里继续创建一个对象(对象总是存储在堆内存中)
+            }
+        }
+        var friend = info.friend
+        friend.name = "陈大伟"
+        console.log(friend)
+
+        //引用传递
+        function foo(a) {
+            a = {
+                name: "陈小伟"  //函数中创建了一个新的对象,并没有对传入的对象进行修改
+            }
+        }
+        var obj = {
+            name: "陈家伟"
+        }
+        foo(obj)
+        console.log(obj)
+
+        //引用传递,但是对传入的对象进行修改
+        function foo2(a) {
+            a.name = "陈大伟"
+        }
+        var obj2 = {
+            name: "陈家伟"
+        }
+        foo2(obj2)
+        console.log(obj2)
+
+
+    </script>
+</body>
+</html>
