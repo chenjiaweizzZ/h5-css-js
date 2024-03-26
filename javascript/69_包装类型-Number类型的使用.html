@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包装类型-Number类型的使用</title>
+</head>
+<body>
+    <script>
+        // console.log(window)
+        // 
+        // var num = 123 // new Number(num)
+        console.log(Number.MAX_VALUE)  //最大值
+        console.log(Number.MIN_VALUE)  //最小值
+        // integer: 整数
+        console.log(Number.MAX_SAFE_INTEGER)  //最大的整数
+        var num = 3.1415926
+        console.log(num.toString(),typeof num.toString())
+        console.log(num.toString(2))  //2进制
+        console.log(num.toString(8))  //8进制
+        console.log(num.toString(16))  //16进制
+        console.log(123..toString(2))  //..
+        var pi = 3.1415926
+        console.log(pi.toFixed(2)) // toFixed(digits) digits的范围是0~20(包含)之间
+
+        //类方法
+        // 整数: 123
+        // 浮点数: 123.321
+        var num1 = "123.321"
+        console.log(Number(num1))
+        console.log(Number.parseInt(num1))  //整数
+        console.log(Number.parseFloat(num1)) //浮点数
+        console.log(parseInt(num1))  //window对象上也有parseInt函数
+    </script>
+</body>
+</html>

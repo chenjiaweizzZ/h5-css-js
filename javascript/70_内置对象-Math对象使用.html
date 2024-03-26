@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内置对象-Math对象使用</title>
+</head>
+<body>
+    <script>
+        // console.log(typeof Number) function
+        // Math -> 对象
+        // var num = new Number() 构造函数才可以new Number
+        console.log(typeof Math)
+        console.log(Math.PI)  //属性
+        // Math.floor向上取整  Math.ceil向下取整  Math.round四舍五入取整  Math.random生成0-1的随机数(包含0,不包含1) Math.pow(x,y)返回x的y次幂
+        var num = 3.55
+        console.log(Math.floor(num))  // 3
+        console.log(Math.ceil(num))  // 4
+        console.log(Math.round(num))  // 3
+
+        //另外的方法
+        console.log(Math.random())  //随机生成[0,1)
+        console.log(Math.floor(Math.random() * 45) + 5)  //随机生成[5,50)
+
+        console.log(Math.pow(2,3))
+
+    </script>
+</body>
+</html>

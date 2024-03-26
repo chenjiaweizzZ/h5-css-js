@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇怪的现象,原始类型调用方法</title>
+</head>
+<body>
+    <script>
+        var name = "hello world"
+        var height = 188
+        // 基本数据类型存储在栈内存中,其值只有一个值,基本类型理论上不应该有属性,不应该有方法
+        // 常见的包装类型有 String Number Boolean Symbol BigInt
+        // function String(str) {
+        //     this.str = str
+        //     this.length = str
+        //     this.split = function() {}
+        // }
+        // name = new String("hello world")
+        console.log(name.length)  // 不用length这些方法的话会自动回收
+        console.log(name.split(" "))
+        // 原始类型默认也是可以手动的创建对象
+        var name1 = new String("hello world")
+        console.log(typeof name1,name1) //object 开发中没有必要手动创建 js引擎会自动优化 可以但是没有必要
+        // null undefined 类型没有任何的类和方法
+    </script>
+</body>
+</html>

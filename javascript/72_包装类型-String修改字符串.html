@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改字符串</title>
+</head>
+<body>
+    <script>
+        var message = "hello world"
+
+        //修改字符串
+        // message = "hello javascript" 严格上来说不算修改字符串
+
+        message[2] = "a"
+
+        console.log(message)  //无法修改
+
+        var message1 = message.toUpperCase() //大写,原来字符串不修改 toLowerCase()
+
+        console.log(message1)
+
+    </script>
+</body>
+</html>

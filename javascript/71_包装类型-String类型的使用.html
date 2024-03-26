@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string类型的使用</title>
+</head>
+<body>
+    <script>
+        var message = "hello world"
+        console.log(message.length)  // length
+        console.log(message[4])
+        console.log(message.charAt(4))
+        //字符串的普通的遍历
+        for (var i = 0; i < message.length; i ++) {
+            console.log(message[i])
+        }
+        //for..of的遍历
+        for(var char of message) {
+            console.log(char)
+        }
+    </script>
+</body>
+</html>
