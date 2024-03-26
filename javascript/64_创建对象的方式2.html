@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create obj2</title>
+</head>
+<body>
+    <script>
+        // javascript已经默认提供了更符合javascript思维方式的规则
+        // 构造函数
+        function Student(name,age) {
+            this.name = name
+            this.age = age
+            this.coding = function() {
+                console.log(this.name + "is coding")
+            }
+        }
+
+        // 在函数前面加上new关键字(操作符)
+        // 1.在内存中创建一个空对象
+        // 2.这个对象的prototype属性会被赋值为该函数的prototype属性
+        // 3.构造函数内部的this会指向构造出来的新对象
+        // 4.执行函数内部的代码
+        // 5.构造函数没有返回非空对象,则返回创建出来的新对象
+        var stu1 = new Student("陈家伟",23)
+        console.log(stu1)
+        
+    </script>
+</body>
+</html>

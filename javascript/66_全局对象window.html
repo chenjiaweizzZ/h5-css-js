@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    <script>
+        // 在浏览器中存在一个全局对象object -> window
+        // 查找变量时候如果找不到,最终会找到window
+        // 使用var来定义对象时候会被默认加入到window上去
+        console.log(window)
+        var message = "hello" //浏览器在后面发现定义的心得数据时候，会对前面的console.log输出来的window进行刷新
+        function foo() {
+            // 自己的作用域
+            alert("hello")  //window的方法
+            // 将浏览器全局提供的变量/函数/方法放在了window对象里
+            console.log(window.console === console)
+            console.log(window.Object === Object)
+        }
+        foo()
+    </script>
+</body>
+</html>

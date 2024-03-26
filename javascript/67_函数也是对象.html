@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数也是对象</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "陈家伟",
+            age: 23
+        }
+        var foo1 = function() {}
+        function foo2() {}
+        // 地址-指针-引用
+        // 都是存储在堆内存中,本质上都是对象类型,function类型就是对象类型
+        // Function extends Object
+        foo1.age = 18
+        console.log(foo1.age,foo1.name)
+    </script>
+</body>
+</html>
