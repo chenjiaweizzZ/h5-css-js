@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找字符串</title>
+</head>
+<body>
+    <script>
+        var message = "my name is chenjiawei"
+        var name = "chenjiawei"
+        // 判断一个字符串中是否包含另外一个字符串
+        // indexOf(searchString, fromIndex) 
+        // 情况1 搜索到了,搜索字符串所在的索引位置
+        // 情况2 没有搜索到  return -1
+        var index = message.indexOf(name)
+        console.log(index)
+        // ES6的新的语法  includes 
+        // 情况1 搜索到了   return true
+        // 情况2 没有搜索到 return false
+        if(message.includes(name)) {
+            console.log("true")
+        }
+        // startsWith:是否以XXX开头
+        if(message.startsWith("my")) {
+            console.log("my")
+        }
+        // 字符串的替换
+        var newMessage = message.replace("chenjiawei","chendawei")
+        console.log(newMessage)
+        var newMessage2 = message.replace("chenjiawei",function() {
+            return "chenxiaowei"
+        })
+        console.log(newMessage2)
+    </script>
+</body>
+</html>

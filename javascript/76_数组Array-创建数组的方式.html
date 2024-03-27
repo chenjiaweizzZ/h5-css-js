@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建数组的方式</title>
+</head>
+<body>
+    <script>
+        // 创建数组方式1
+        var names = ["陈家伟","陈小伟","陈大伟","陈小小"]
+        // console.log(names[-1]) javascript不支持
+        console.log(names[names.length-1])
+        var products = [
+            {
+                name: "牙刷",
+                price: 10
+            },
+            {
+                name: "鼠标",
+                price: 98
+            },
+            {
+                name: "键盘",
+                price: 100
+            }
+        ]
+
+        //创建数组方式2 类Array
+        console.log(window.Array)
+        var arr1 = new Array()
+        var arr2 = new Array("陈家伟","陈小伟","陈大伟","陈小小")
+        var arr3 = new Array(5) //如果只传入数字,会被当成数组的长度
+        console.log(arr1)
+        console.log(arr2)
+        console.log(arr3,arr3[2])  //数组的值都是undefined
+    </script>
+</body>
+</html>

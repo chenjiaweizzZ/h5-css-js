@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的新增和删除</title>
+</head>
+<body>
+    <script>
+        var names = ["陈家伟","陈小伟","陈大伟","陈伟伟","陈晨"]
+
+        // 数组的尾部添加和删除元素  push pop删除只可以删除一个
+        names.push("陈伟伟","陈家家")
+        console.log(names)
+        names.pop()
+        names.pop()
+        console.log(names)
+
+        // 数组的头部添加和删除元素  unshift  shift删除只可以删除一个
+        names.unshift("chan jwei", "chanweij")
+        console.log(names)
+        names.shift()
+        names.shift()
+        console.log(names)
+
+        // 唯一真神 splice
+        // 参数一,从什么位置开始操作
+        // 参数二,删除元素的个数
+        // 参数三,插入的元素
+        names.splice(1,2) // 从第一个位置开始,删除后面两个元素
+        console.log(names)
+        //新增
+        names.splice(0,0,"hello")
+        console.log(names)
+        //替换
+        names.splice(1,1,"world","hello","javascript")
+        console.log(names)
+    </script>
+</body>
+</html>
