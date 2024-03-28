@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动实现高阶函数find</title>
+</head>
+<body>
+    <script>
+        var names = ["陈家伟","陈小伟","陈大伟"]
+
+        var name = names.find(function(item,index,arr) {
+            console.log(item,index,arr)
+            // return true return true的话返回的是第一个元素
+        })
+        console.log(name)  //undefined
+
+        Array.prototype.cfind = function(fn) {
+            var item = undefined
+            for (let i = 0; i < this.length; i++) {
+                var isFlag = fn(this[i],i,this)
+                if (isFlag) {
+                    // return this[i] return也会让代码中止执行
+                    item = this[i]
+                    break
+                }
+            }
+            return item
+        }
+
+        var name2 = names.cfind(i => i === "陈小伟")
+        console.log(name2)
+    </script>
+</body>
+</html>
