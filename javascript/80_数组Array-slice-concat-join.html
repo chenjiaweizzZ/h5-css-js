@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice-concat-join</title>
+</head>
+<body>
+    <script>
+        var names = ["陈家伟","陈小伟","陈大伟","陈伟伟","陈家家"]
+
+        // slice方法不会修改原数组 slice(start, end)不包含end本身
+        // splice有区别,splice会修改原数组
+        names.slice(1)
+        console.log(names)
+        var newNames = names.slice(1,3)  //不包含end本身
+        console.log(newNames)
+
+        // concat方法: 将多个数组拼接在一起
+        // push会修改原来的数组,concat是生成一个新的数组
+        var names1 = ["abc","aac"]
+        var names2 = ["bbc","bca"]
+        var names3 = ["cba","cbc"]
+        var nameList = names1.concat(names2,names3)
+        console.log(nameList)
+
+        // join 数组转字符串
+        console.log(names.join())
+        console.log(names.join(""))  // 默认以逗号
+        console.log(names.join("、"))
+    </script>
+</body>
+</html>

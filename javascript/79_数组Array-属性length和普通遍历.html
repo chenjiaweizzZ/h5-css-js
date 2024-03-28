@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的属性-length</title>
+</head>
+<body>
+    <script>
+        var names = ["abc","cba","bcc"]
+        console.log(names.length)
+        // names.length = 10  //数组的长度可以编辑,扩容empty
+        console.log(names)
+
+        // 数组的遍历
+        // 普通的for循环
+        for (var i = 0; i < names.length; i++) {
+            console.log(names[i])
+        }
+
+        // for..in   对象拿到的是key,数组拿到的是索引
+        for (var i in names) {
+            console.log(i)
+            console.log(names[i])
+        }
+
+        // for..of  拿到value
+        for (var name of names) {
+            console.log(name)
+        }
+
+    </script>
+</body>
+</html>

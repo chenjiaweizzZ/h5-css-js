@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组中查找元素</title>
+</head>
+<body>
+    <script>
+        // 1.简单的数组,存放的都是原始类型
+        var names = ["abc","cba","bca","nba"]
+        console.log(names.indexOf("nba"))  //找到返回所有,没有的话返回-1
+        console.log(names.indexOf("bac"))
+        // 2.数组中存放的为对象类型
+        var students = [
+            { id: 1, name: "陈家伟"},
+            { id: 2, name: "陈小伟"},
+            { id: 3, name: "陈大伟"},
+            { id: 4, name: "陈伟伟"},
+        ]
+        // 查找id为3的学生
+        for(var i = 0; i < students.length; i ++) {
+            if(students[i].id === 3) {
+                console.log(students[i])
+            }
+        }
+        // 3.find 高阶函数  传入另外一个函数作为参数
+        // var stu = students.find(function(item) {
+        //     if(item.id === 3) return ture
+        // })
+        var student = students.find(i => i.id === 3)
+        console.log(student)
+    </script>
+</body>
+</html>

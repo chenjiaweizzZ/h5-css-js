@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动实现高阶函数</title>
+</head>
+<body>
+    <script>
+        var names = ["陈家伟","陈小伟","陈大伟"]
+        // for (let index = 0; index < names.length; index++) {
+        //     console.log(names[index])
+        // }
+        function cforEacha(fn) {
+            for(var i = 0; i < names.length; i++) {
+                fn(names[i],i,names)
+            }
+        }
+        cforEacha(function(item,index,arr) {
+            console.log(item,index,arr)
+        })
+
+        //-------------------------------------------------------------
+
+        function cforEacha1(fn,arr) {
+            for(var i = 0; i < arr.length; i++) {
+                fn(names[i],i,arr)
+            }
+        }
+
+        cforEacha1(function(item,index,arr) {
+            console.log(item,index,arr)
+        },names)
+
+
+        //-------------------------------------------------------------
+
+        names.cforEacha2 = function cforEacha(fn) {
+            for(var i = 0; i < this.length; i++) {
+                fn(names[i],i,this)
+            }
+        }
+        names.cforEacha2(function(item,index,arr) {
+            console.log(item,index,arr)
+        })
+
+        //-------------------------------------------------------------
+
+        Array.prototype.cforEacha3 = function cforEacha(fn) {
+            for(var i = 0; i < this.length; i++) {
+                fn(names[i],i,this)
+            }
+        }
+
+        names.cforEacha3(function(item,index,arr) {
+            console.log(item,index,arr)
+        })
+
+
+
+    </script>
+</body>
+</html>
