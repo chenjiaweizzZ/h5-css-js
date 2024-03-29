@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组中查找元素2</title>
+</head>
+<body>
+    <script>
+        names = ["陈家伟","陈小伟","陈大伟"]
+        console.log(names.includes("陈大伟"))
+        var index = names.findIndex(function(item,index,arr) {
+            return item === "陈小伟"
+        })
+        console.log(index)
+    </script>
+</body>
+</html>

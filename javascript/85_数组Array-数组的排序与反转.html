@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的排序与反转</title>
+</head>
+<body>
+    <script>
+        var num2 = [1,30,8,7,60,9]
+        num2.sort(function(item1, item2) {
+            //谁小谁在前面
+            return item1 - item2
+            // return item2 - item1 //反转
+        })
+        console.log(num2)
+        console.log(num2.reverse())  //反转
+    </script>
+</body>
+</html>
