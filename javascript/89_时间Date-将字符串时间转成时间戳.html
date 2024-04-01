@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串时间转成时间戳</title>
+</head>
+<body>
+    <script>
+        var timeString = "2024-4-1"
+        // 方式一
+        var date = new Date(timeString)
+        console.log(+date)
+        console.log(Date.parse(timeString))
+    </script>
+</body>
+</html>

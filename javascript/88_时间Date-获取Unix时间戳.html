@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取Unix时间戳</title>
+</head>
+<body>
+    <script>
+        var date = new Date("2033-03-03")
+        console.log(date)
+        // 方法1
+        var timeStamp = Date.now()
+        console.log(timeStamp)
+        var timeStamp2 = date.getTime()
+        console.log(timeStamp2)
+        var timeStamp3 = date.valueOf()
+        console.log(timeStamp3)
+
+        console.log(+date)
+    </script>
+</body>
+</html>
