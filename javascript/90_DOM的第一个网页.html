@@ -6,13 +6,18 @@
     <title>dom的第一个网页</title>
 </head>
 <body>
-    <div class="box">box</div>
-    <h2>DOM</h2>
-    <p>dom</p>
+    <div class="box">
+        <h2>DOM</h2>
+        <p>dom</p>
+    </div>
     <script>
         console.log(document.body.children)
         var boxEl = document.body.children[0]
         console.log(boxEl)
+        console.log(boxEl.children)
+        boxEl.children[0].style.fontSize = "100px"
+        boxEl.children[0].nextElementSibling.style.color = "orange"
+        document.body.style.backgroundColor = "red"
     </script>
 </body>
 </html>
