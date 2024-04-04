@@ -6,12 +6,30 @@
     <title>document对象</title>
 </head>
 <body>
+    <!-- 我是注释 -->
+
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
     <script>
         var htmlEl = document.documentElement
         var bodyEl = document.body
         var headEl = document.head
         var doctype = document.doctype
-        console.log(htmlEl,bodyEl,headEl,doctype)
+        // console.log(htmlEl,bodyEl,headEl,doctype)
+        // console.log(htmlEl)
+        // console.log(bodyEl)
+        // console.log(headEl)
+        // console.log(doctype)
+        console.log(bodyEl.childNodes)  //获取所有子节点 text是换行也属于文本,comment是注释
+        console.log(bodyEl.firstChild)
+        console.log(bodyEl.firstChild.nextSibling)
     </script>
 </body>
 </html>

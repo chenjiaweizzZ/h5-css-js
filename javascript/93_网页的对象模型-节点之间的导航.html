@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页的对象模型-节点之间的导航</title>
+</head>
+<body>
+      <!-- 我是注释 -->
+
+    <div>我是div</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <span>我是span</span>
+    
+    <script>
+        var bodyEl = document.body
+        // 根据body元素获取子元素 childElement
+        var childrenElements = bodyEl.children
+        console.log(childrenElements)
+        console.log(bodyEl.firstElementChild)
+        console.log(childrenElements[0])
+        console.log(bodyEl.firstElementChild.nextElementSibling)
+        console.log(bodyEl.firstElementChild.nextElementSibling.children)
+    </script>
+</body>
+</html>
