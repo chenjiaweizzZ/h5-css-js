@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form元素之间的导航</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="account">
+        <input type="password" name="password">
+    </form>
+    <script>
+        var form = document.body.firstElementChild
+        console.log(form)
+        console.log(document.forms[0])
+        console.log(form[0])
+    </script>
+</body>
+</html>

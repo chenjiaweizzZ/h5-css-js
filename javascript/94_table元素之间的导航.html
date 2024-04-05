@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table元素之间的导航</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>身高</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>陈家伟</td>
+                <td>23</td>
+                <td>175</td>
+            </tr>
+            <tr>
+                <td>陈小伟</td>
+                <td>23</td>
+                <td>175</td>
+            </tr>
+            <tr>
+                <td>陈大伟</td>
+                <td>23</td>
+                <td>175</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    // var tableEl = document.body.children[0] as HTMLTableElement
+    var tableEl = document.body.children[0]
+    console.log(tableEl.tHead)
+    console.log(tableEl.rows)
+    console.log(tableEl.rows[2])
+</script>
+</html>
