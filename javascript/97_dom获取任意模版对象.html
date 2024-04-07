@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom获取任意模版对象</title>
+</head>
+
+<body>
+    <div class="box">
+        <h2>我是标题</h2>
+        <div class="container">
+            <p>
+                我是段落<span class="keyword">陈家伟1</span>哈哈哈
+            </p>
+        </div>
+        <span class="keyword">陈家伟2</span>
+        <span id="keyword2">陈家伟id</span>
+    </div>
+    <script>
+        //通过导航获取
+        // var bodyEl = document.body
+        // var boxEl = bodyEl.firstElementChild
+        // var containerEl = boxEl.children[1]
+        // var pEl = containerEl.children[0]
+        // var keywordEl = pEl.children[0]
+        // keywordEl.style.color = "red"
+
+        //通过className直接获取
+        // var keyworldElements = document.getElementsByClassName("keyword")
+        // console.log(keyworldElements)
+        // for(var i = 0 ; i < keyworldElements.length ; i ++) {
+        //     keyworldElements[i].style.color = "red"
+        // }
+
+        //通过id来获取
+        // var keywordElement = document.getElementById("keyword2") 
+        // keywordElement.style.color = "red"
+
+        //通过querySelector
+        // var keyworldElement = document.querySelector(".keyword")
+        var keyworldElement2 = document.querySelector("#keyword2")
+        var keyworldElements = document.querySelectorAll(".keyword")  //不是一个数组,可迭代对象
+        for (var i = 0; i < keyworldElements.length; i++) {
+            keyworldElements[i].style.color = "red"
+        }
+        keyworldElement2.style.color = "yellow"
+    </script>
+</body>
+
+</html>
