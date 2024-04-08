@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>class的用法</title>
+    <style>
+        .abc {
+            color: red;
+        }
+        .active {
+            color: blue;
+            font-size: 25px;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
     <div class="box">
         我是box
     </div>
+    <button class="btn">切换</button>
     <script>
         var boxEl = document.querySelector(".box")
         //方法一: className
-        boxEl.className = "abc"  //会将原来的class覆盖掉
+        // boxEl.className = "abc"  //会将原来的class覆盖掉
         //方法二:classList
         // elem.classList.add(class) 添加一个类
+        // elem.classList.remove(class) 添加/移除类
+        // elem.classList.toggle(class) 如果不存在就添加类,存在就移除它
+        // elem.classList.contains(class) 检查给定类,返回true/false
 
-        // boxEl.
+        boxEl.classList.add("abc")
+        boxEl.classList.remove("abc")
+        var btn = document.querySelector(".btn")
+        btn.onclick = function() {
+            console.log(boxEl.classList.contains("active"))
+            // boxEl.classList.contains("active") ? boxEl.classList.remove("active") : boxEl.classList.add("active")
+            boxEl.classList.toggle("active")
+        }
     </script>
 </body>
-</html>w'w
+</html>
