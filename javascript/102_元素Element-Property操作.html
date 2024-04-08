@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property</title>
+</head>
+<body>
+    <input type="checkbox" checked>
+    账号: <input type="text" class="account">
+    <div class="box" id="abc" age="18" title="box">box</div>  
+    <!-- 元素中的属性称之为attribute -->
+    <!-- 标准的attribute在对应的对象模型中都有对应的property -->
+    <script>
+        var obj = { name: "why" }  // 对象中的属性称之为property
+        var boxEl = document.querySelector(".box")
+        console.log(boxEl.id,boxEl.className,boxEl.title,boxEl.age) //box为对象,所以id为property,非标准的attribute没有property,class为例外,对应的property为className
+
+        var inputEL = document.querySelector("input")
+        console.log(inputEL.checked)
+
+        //attribute和property是相互影响的
+        boxEl.id = "aaaaa"
+        console.log(boxEl.getAttribute("id"))
+        boxEl.setAttribute("title","哈哈哈")
+        console.log(boxEl.title)
+
+        //特殊情况,input设置值(老浏览器不可以,新浏览器可以)
+        var accountInputEl = document.querySelector(".account")
+        // accountInputEl.value = "chenjiawei"  //优先级更高
+        accountInputEl.setAttribute("value","chenjiawei")
+
+    </script>
+</body>
+</html>
