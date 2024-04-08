@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 我是注释,注释上面的换行也是文本 -->
+    我是文本
+    <div class="box">我是box<span>我是span</span></div>
+    <script>
+        var childNodes = document.body.childNodes
+        var commentNode = childNodes[1]
+        var textNode = childNodes[2]
+        var divNode = childNodes[3]
+        console.log(commentNode,textNode,divNode)
+        console.log(commentNode.nodeType,textNode.nodeType,divNode.nodeType)  //nodeType可以获取节点类型,而且获取的是一个数字常量
+        console.log(Node.COMMENT_NODE)  //常量值
+        console.log(commentNode.nodeName,textNode.nodeName,divNode.nodeName)  //nodeName 节点的名称
+        console.log(commentNode.tagName,textNode.tagName,divNode.tagName)   //tagName  针对元素(element)
+        console.log(commentNode.data,textNode.data,divNode.data)   //data  针对非元素的节点获取数据
+        console.log(commentNode.innerHTML,textNode.innerHTML,divNode.innerHTML)  //innerHTML 针对元素(element)  包含的html也可以拿到
+        console.log(divNode.outerHTML)  //自身的html也加上
+        console.log(divNode.textContent)  //只拿文本
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute操作</title>
+</head>
+<body>
+    <div class="box" age="18" id="abc" title="bbb">
+        box内容
+    </div>
+    <input type="checkbox" checked>
+    <script>
+        var boxEl = document.querySelector(".box")
+        //所有的Attribute都支持的操作
+        console.log(boxEl.hasAttribute("age"),boxEl.hasAttribute("abc"))
+        boxEl.setAttribute("id","lll")
+        boxEl.removeAttribute("title")
+        var boxAttributes = boxEl.attributes
+        for (var attr of boxAttributes) {
+            console.log(attr)
+        }
+        console.log(boxEl.getAttribute("id"))
+        var inputEL = document.querySelector("input")
+        console.log(inputEL.getAttribute("checked"))  //getAttribute输出结果一定是字符串
+    </script>
+</body>
+</html>

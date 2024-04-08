@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hidden</title>
+</head>
+<body>
+    <!-- id class title style 都是全局属性 -->
+    <!-- hidden本质为display:none -->
+    <button class="btn">切换</button>
+    <div id="box" hidden>
+        hidden
+    </div>
+    <script>
+        var boxEl = document.querySelector("#box")  //获取元素
+        var btnEl = document.querySelector(".btn")  //获取第一个按钮元素
+        btnEl.onclick = function() {
+            boxEl.hidden = !boxEl.hidden
+            console.log(boxEl.hidden)
+        }
+    </script>
+</body>
+</html>
