@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element-class和style</title>
+    <style>
+        .active {
+            color: red;
+            font-size: 24px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素的class attribute,对应的property并非叫class,而是className:
+    这是因为javascript早期是不允许使用class这种关键字来作为对象的属性,所以dom规范使用了className
+    虽然现在javascript已经没有这样的限制,但是并不推荐,而且依然在使用className这个名称 -->
+    <div class="box">
+        我是box
+    </div>
+    <script>
+        var counter = 1
+        //获取boxEl
+        var boxEl = document.querySelector(".box")
+        boxEl.onclick = function() {
+            // boxEl.style.color = "red"  //直接修改attribute(style是个对象)
+            // boxEl.style.fontSize = "24px" 
+
+            boxEl.className = "active"
+
+            boxEl.style.width = 100 * counter + "px"  //一般用style的情况
+            counter++
+        }
+    </script> 
+</body>
+</html>
