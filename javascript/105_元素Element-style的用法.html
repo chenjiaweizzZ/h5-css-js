@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element-style</title>
+</head>
+<body>
+    <div class="box" style="background-color: aqua;color: blue;">
+        我是box
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        console.log(boxEl.style.backgroundColor)
+        boxEl.style.cssText = "font-size: 30px; color: red"  //多个样式
+    </script>
+</body>
+</html>

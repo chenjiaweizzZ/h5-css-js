@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element-style</title>
+    <style>
+        .box {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="background-color: aqua;color: blue;">
+        我是box
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        console.log(boxEl.style.backgroundColor)
+        console.log(boxEl.style.fontSize)   //读取不到内联样式的属性的值
+        console.log(getComputedStyle(boxEl).fontSize)  //getComputedStyle全局函数
+    </script>
+</body>
+</html>
