@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element-移除-克隆</title>
+</head>
+
+<body>
+    <button class="removeBtn">移除box</button>
+    <button class="cloneBtn">克隆box</button>
+    <div class="box">
+        <h2>我是标题</h2>
+        <p>我是文本</p>
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        var removeBtnEl = document.querySelector(".removeBtn")
+        removeBtnEl.onclick = function() {
+            boxEl.remove()  //直接移除
+        }
+        var cloneBtnEl = document.querySelector(".cloneBtn")
+        var counter = 0
+        cloneBtnEl.onclick = function() {
+            var newNode = boxEl.cloneNode(true)  //参数传入true为深拷贝
+            newNode.children[0].textContent = "我是标题" + counter
+            counter ++
+            console.log(newNode)
+            // boxEl.after(newNode)
+            document.body.append(newNode)
+        }
+    </script>
+</body>
+
+</html>
