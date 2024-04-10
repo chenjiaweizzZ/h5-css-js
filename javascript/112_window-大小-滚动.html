@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window的大小和滚动</title>
+    <style>
+        .to-top {
+            background-color: aqua;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* display: flex; */
+            /* align-items: center;
+            justify-content: center; */
+            line-height: 100px;
+            text-align: center;
+        }
+        .add {
+            position: fixed;
+            left: 0;
+        }
+        .sub {
+            position: fixed;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="to-top" hidden>↑</div>
+    <button class="add">↑</button>
+    <button class="sub">↓</button>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <script>
+        console.log(window.outerWidth,window.outerHeight)   //全部区域
+        console.log(window.innerWidth,window.innerHeight)   //只是内容区域,不包括title,控制台
+        console.log(document.documentElement.offsetWidth,document.documentElement.offsetHeight)   //没有内容的时候获取的高度只是html的高度只有8
+        // window.onclick = function() {
+        //     console.log(window.scrollX,window.scrollY)
+        // }
+        var toTopEl = document.querySelector(".to-top")
+        window.onscroll = function() {
+            console.log(window.scrollY,pageYOffset)   //scrollX = pageXOffset  scrollY = pageYOffset
+            if(window.scrollY > 400) {
+                toTopEl.hidden = false
+                console.log("show")
+                console.log(toTopEl.hidden)
+            }else {
+                toTopEl.hidden = true
+                console.log("hidden")
+                console.log(toTopEl.hidden)
+            }
+        }
+        toTopEl.onclick = function() {
+            window.scrollTo(0,0)
+        }
+        var addBtnEl = document.querySelector(".add")
+        addBtnEl.onclick = function() {
+            console.log("add")
+            window.scrollBy(0,100)
+        }
+        var subBtnEl = document.querySelector(".sub") 
+        subBtnEl.onclick = function() {
+            console.log("sub")
+            window.scrollBy(0,-100)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的大小和位置</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        哈哈哈哈
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        var boxStyle = getComputedStyle(boxEl)
+        console.log(boxStyle.width,boxStyle.height)
+        // clientWidth clientHeight 内容宽度 + padding 不包含滚动条
+        // clientTop clientLeft border-top和border-left的宽度
+        // offsetWidth offsetHeight 元素完整的宽度和高度
+        // offsetLeft offsetHeight 距离父元素的x  距离父元素的y
+        // scrollHieght 可滚动的高度 ***
+        // scrollTop   滚动的距离  ***
+
+        // window对象监听点击
+
+        window.onclick = function() {
+            console.log("windowClick")
+        }
+
+        </script>
+</body>
+</html>
