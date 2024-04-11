@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        h2 {
+            font-size: 5vw;
+            text-align: center;
+        }
+        .countdown {
+            display: flex;
+            justify-content: space-between;
+        }
+        .time {
+            background-color: black;
+            border-radius: 4px;
+            display: inline-block;
+            height: 30vw;
+            width: 30vw;
+            color: #fff;
+            line-height: 30vw;
+            text-align: center;
+            font-size: 25vw;
+            border-radius: 5vw;
+        }
+    </style>
+</head>
+<body>
+    <h2>下班倒计时</h2>
+    <div class="countdown">
+        <span class="time hour"></span>
+        <!-- <span class="split ">:</span> -->
+        <span class="time minute"></span>
+        <!-- <span class="split ">:</span> -->
+        <span class="time second"></span>
+    </div>
+    <script>
+        var hourEl = document.querySelector(".hour")
+        var minuteEl = document.querySelector(".minute")
+        var secondEl = document.querySelector(".second")
+        var endDate = new Date()
+        endDate.setHours(17)
+        endDate.setMinutes(30)
+        endDate.setSeconds(0)
+        endDate.setMilliseconds(0)
+        setInterval(() => {
+            var nowDate = new Date()
+            var intervalTime = Math.floor((endDate.getTime() - nowDate.getTime()) / 1000)
+            var hour = Math.floor(intervalTime / 3600)
+            var minute = Math.floor(intervalTime / 60) % 60
+            var second = intervalTime % 60
+            hourEl.textContent  = hour
+            minuteEl.textContent  = minute
+            secondEl.textContent  = second
+        },1000)
+        
+    </script>
+</body>
+</html>
