@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间处理函数中的this</title>
+</head>
+<body>
+    <div>
+        <button>按钮</button>
+    </div>
+    
+    <script>
+        var btnEl = document.querySelector("button")
+        btnEl.onclick = function() {
+            console.log(this)  //指向的是button本身
+        }
+        var divEl = document.querySelector("div")
+        divEl.onclick = function() {
+            console.log(this)
+            console.log(this == divEl)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象的方法解析</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+        .box span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度一下</a>
+
+    <div class="box">
+        <span>
+            <button>按钮</button>
+        </span>
+    </div>
+
+    <script>
+        var aEl = document.querySelector("a")
+        aEl.onclick = function() {
+            console.log("阻止点击行为")
+            event.preventDefault()  //阻止默认行为
+        }
+        var btnEl = document.querySelector("button")
+        var spanEl = document.querySelector("span")
+        var divEl = document.querySelector("div")
+
+        divEl.addEventListener("click",function(event) {
+            console.log("div事件捕获监听")
+        },true)
+        spanEl.addEventListener("click",function() {
+            console.log("spanEl事件捕获监听")
+            event.stopPropagation()
+        },true)
+        btnEl.addEventListener("click",function() {
+            console.log("btnEl事件捕获监听")
+        },true)
+
+        divEl.addEventListener("click",function() {
+            console.log("div事件冒泡监听")
+        })
+        spanEl.addEventListener("click",function() {
+            console.log("spanEl事件冒泡监听")
+        })
+        btnEl.addEventListener("click",function() {
+            console.log("btnEl事件冒泡监听")
+        })
+    </script>
+</body>
+</html>

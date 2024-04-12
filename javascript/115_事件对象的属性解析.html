@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象的详细解析</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .btn {
+            width: 100px;
+            height: 100px;
+            background-color:blueviolet;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="btn">按钮</span>
+    </div>
+    <script>
+        var divEl = document.querySelector("div")
+        var btnEl = document.querySelector(".btn")
+        btnEl.onclick = function() {
+            // console.log("按钮发生了点击",event)
+            // console.log("事件类型:",event.type)
+            // console.log("事件捕获阶段",event.eventPhase)
+            // console.log("事件元素中的位置",event.offsetX,event.offsetY)
+            // console.log("事件客户端中的位置",event.clientX,event.clientY)
+            // console.log(target,current)
+            //eventPhase 捕获阶段1 点击元素本身2 冒泡阶段3
+        }
+        divEl.onclick = function() {
+            console.log("按钮发生了点击",event)
+            console.log("事件类型:",event.type)
+            console.log("事件捕获阶段",event.eventPhase)
+            console.log("事件元素中的位置",event.offsetX,event.offsetY)
+            console.log("事件客户端中的位置",event.clientX,event.clientY)
+            console.log(event.target,event.currentTarget)
+            console.log(event.target === event.currentTarget)
+        }
+    </script>
+</body>
+</html>
