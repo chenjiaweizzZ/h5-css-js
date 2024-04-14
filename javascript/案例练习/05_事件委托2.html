@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委托</title>
+ </head>
+ <body>
+    <div class="btnGroup">
+        <button data-action="add">新建</button>
+        <button data-action="edit">编辑</button>
+        <button data-action="del">删除</button>
+    </div>
+    <script>
+        var btnEls = document.querySelector(".btnGroup")
+        btnEls.onclick = function(event) {
+            console.log(event.target)
+            var action = event.target.dataset.action
+            switch (action) {
+                case "add":
+                    console.log("add")
+                    break
+                case "edit":
+                    console.log("edit")
+                    break
+                case "del":
+                    console.log("del")
+                    break
+                default:
+                    break
+            }
+        }
+    </script>
+ </body>
+ </html>

@@ -41,7 +41,9 @@
             // console.log("ul点击",event.target)
             var activeEl = ulEl.querySelector('.active')
             activeEl && activeEl.classList.remove("active") 
-            event.target.classList.add("active")
+            if(event.target !== ulEl) {
+                event.target.classList.add("active")
+            }
         }
     </script>
 </body>
