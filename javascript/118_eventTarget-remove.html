@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventTarget</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        var btnEl = document.querySelector("button")
+        var foo = function() {
+            console.log("btnElClick")
+        }
+        btnEl.addEventListener("click",foo)
+
+        //过5秒钟后将这个事件监听移除掉
+
+        setTimeout(function() {
+            //将事件监听移除
+            console.log("remove")
+            btnEl.removeEventListener("click", foo) //移除的函数不可以是匿名函数,必须要有引用foo,指向的同一个对象
+        }, 5000);
+
+    </script>
+</body>
+</html>

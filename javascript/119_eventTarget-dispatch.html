@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-dispatch</title>
+</head>
+<body>
+    <script>
+
+        // eventTarget就可以实现类似于事件总线的效果
+        window.addEventListener("chenjiawei",function() {
+            console.log("cjw12138")
+        })
+
+        setTimeout(function() {
+            window.dispatchEvent(new Event("chenjiawei"))
+        },5000)
+
+        
+
+    </script>
+</body>
+</html>
