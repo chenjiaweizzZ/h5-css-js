@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件-搜索</title>
+</head>
+<body>
+    <input type="text">
+    <button>搜索</button>
+    <script>
+        var inputEl = document.querySelector("input")
+        var btnEl = document.querySelector("button")
+        var search = function() {
+            inputEl.value && console.log(inputEl.value)
+        }
+        btnEl.onclick = search
+        inputEl.onkeyup = function() {
+            inputEl.value && event.code == 'Enter' && search()
+        }
+        //按下s搜索框自动获取焦点
+        document.onkeyup = function() {
+             event.code == 'KeyS' && inputEl.focus()
+        }
+    </script>
+</body>
+</html>
