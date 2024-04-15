@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件mouseenter和over</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span></span>
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        //mouseenter和mouseleave不支持冒泡,进入子元素依然属于在该元素内,没有任何反应
+        // boxEl.onmouseenter = function () {
+        //     console.log("onmouseenter")
+        // }
+
+        // boxEl.onmouseleave = function () {
+        //     console.log("onmouseleave")
+        // }
+
+        //mouseover和mousemouseout在进入子元素时候会再执行一次
+        boxEl.onmouseover = function () {
+            console.log("onmouseover")
+        }
+
+        boxEl.onmouseout = function () {
+            console.log("onmouseseout")
+        }
+    </script>
+</body>
+
+</html>
