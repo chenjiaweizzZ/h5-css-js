@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档加载监听</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //注册事件监听
+        //DOMContentLoaded 浏览器已经完全加载HTML,并构建了DOM树,但像<img>和样式表之类的外部资源可能尚未加载完成
+        //load 浏览器不仅加载完成HTML,还加载完成了所有的外部资源:图片,样式等
+        // window.onload = function() {
+        //     var boxEl = document.querySelector(".box")
+        //     boxEl.style.backgroundColor = "orange" 
+        // }
+        window.addEventListener("DOMContentLoaded",function() {
+            var boxEl = document.querySelector(".box")
+            boxEl.style.backgroundColor = "orange" 
+        })
+        window.onresize = function() {
+            console.log("onresize")
+        }
+    </script>
+    <div class="box"></div>
+    <!-- <script>
+        var boxEl = document.querySelector(".box")
+        boxEl.style.backgroundColor = "orange"
+    </script> -->
+</body>
+</html>

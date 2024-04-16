@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+</head>
+<body>
+    <form action="/abc">
+        <input type="text">
+        <button type="reset">重置</button>
+        <button type="submit">提交</button>
+    </form>
+    
+    <script>
+        var iptEl = document.querySelector("input")
+        //获取和失去焦点
+        iptEl.onfocus = function() {
+            console.log("input获取到焦点")
+        }
+        iptEl.onblur = function() {
+            console.log("input失去焦点")
+        }
+        //内容发生改变和输入内容
+        iptEl.oninput = function() {
+            console.log("正在输入",iptEl.value)
+        }
+        iptEl.onchange = function() {
+            console.log("内容发生改变",iptEl.value)  //失去焦点时触发
+        }
+
+        var formEl = document.querySelector("form")
+        formEl.onreset = function() {
+            console.log("重置了表单")
+        }
+
+        formEl.onsubmit = function(event) {
+            console.log("发生了提交事件")
+            event.preventDefault()    //阻止提交
+        } 
+
+    </script>
+</body>
+</html>

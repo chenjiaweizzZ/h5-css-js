@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的鼠标事件</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        boxEl.onclick = function() {
+            console.log("onclick")
+        }
+        boxEl.oncontextmenu = function(evevnt) {
+            console.log("oncontextmenu点击了右键")
+            event.preventDefault()  //阻止弹出右键选项
+        }
+        boxEl.onmousedown = function() {
+            console.log("onmousedown鼠标按下去")
+        }
+        boxEl.onmouseup = function() {
+            console.log("onmouseup鼠标抬起来")
+        }
+        boxEl.onmousemove = function() {
+            console.log("onmousemove鼠标移动")
+        }
+    </script>
+</body>
+</html>
