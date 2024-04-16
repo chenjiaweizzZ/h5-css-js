@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window的定时器</title>
+</head>
+<body>
+    
+    <button class="out">取消setTimeout定时器</button>
+    <button class="inv">取消setInterval定时器</button>
+
+    <script>
+        //有时候我们并不想立即执行一个函数,而是等待特定一段时间之后再执行,我们称之为计划调用
+        function foo() {
+            console.log("----------------")
+        }
+
+        // var timeoutID = setTimeout(foo, 5000);
+
+        var invID = setInterval(foo, 3000)
+
+        var timeoutBtn = document.querySelector(".out")
+        timeoutBtn.onclick = function() {
+            clearTimeout(timeoutID)
+        }
+
+        var timeinvBtn = document.querySelector(".inv")
+        timeinvBtn.onclick = function() {
+            clearInterval(invID)
+        }
+
+
+    </script>
+</body>
+</html>
