@@ -49,6 +49,17 @@
         var tipBar = document.querySelector(".tip-bar")
         var imgEl = tipBar.querySelector("img")
         var spanEl = tipBar.querySelector("span")
+        var currentIndex = 0
+        setInterval(() => {
+            var tipItem = tipList[currentIndex]
+            imgEl.src = tipItem.icon,
+            spanEl.textContent = tipItem.title
+            currentIndex ++
+            console.log(currentIndex)
+            if(currentIndex === tipList.length) {
+                currentIndex = 0
+            }
+        }, 3000);
     </script>
 </body>
 </html>
