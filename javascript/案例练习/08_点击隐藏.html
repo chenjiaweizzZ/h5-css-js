@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击隐藏！</title>
+</head>
+<body>
+    <div class="box">
+        欢迎访问
+        <button>叉叉</button>
+    </div>
+    <script>
+        var boxEl = document.querySelector(".box")
+        var btnEl = boxEl.querySelector("button")
+        btnEl.onclick = function() {
+            boxEl.style.height = 0
+            setTimeout(() => {
+                boxEl.remove()
+            },300)
+        }
+    </script>
+</body>
+</html>
