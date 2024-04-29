@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history对象的使用</title>
+</head>
+<body>
+    <button>修改history</button>
+    <button class="back">back</button>
+    <script>
+        //前端路由核心:修改url但是页面不刷新
+        //1.修改hash值 
+        //2.修改history
+
+        //history对应的属性
+        console.log(history.length,history.state)
+        var btnEl = document.querySelector("button")
+        btnEl.onclick = function() {
+            history.pushState({ name: "chenjiawei" },"","/list")
+        }
+        var backEl = document.querySelector(".back")
+        backEl.onclick = function() {
+            history.back()
+        }
+    </script>
+</body>
+</html>
