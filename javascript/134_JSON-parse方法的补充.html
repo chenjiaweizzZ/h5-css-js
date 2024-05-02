@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-parse方法的补充</title>
+</head>
+<body>
+    <script>
+        var info = {
+            name: "chenjiawei",
+            age: 23,
+            height: 175,
+            friend: {
+                name: "chendawei"
+            },
+        }
+        var infoString = JSON.stringify(info)
+        console.log(infoString)
+        var newInfo = JSON.parse(infoString, function(key, value) {
+            if (key === 'age') {
+                return value + 2
+            }
+            return value
+        })
+        console.log(newInfo)
+    </script>
+</body>
+</html>
