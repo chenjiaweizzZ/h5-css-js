@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window对象的使用</title>
+</head>
+<body>
+    <button>百度一下</button>
+    <script>
+        //window
+        //ECMAScript规范: 全局对象 -> globalThis
+        //浏览器->window  node->global
+        console.log(window.console,window.alert)
+        console.log(window,globalThis)
+        //浏览器窗口
+        console.log(window.outerHeight)
+        //常见的方法
+        var openBtn = document.querySelector("button")
+        openBtn.onclick = function() {
+            window.open("http://www.baidu.com")
+        }
+        window.onfocus = function() {
+            console.log("窗口获取到焦点")
+        }
+        window.onblur = function() {
+            console.log("窗口失去焦点")
+        }
+    </script>
+</body>
+</html>

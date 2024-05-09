@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环2</title>
+</head>
+
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <script>
+        var btnEls = document.querySelectorAll("button")
+        for(var i = 0; i < 5; i++) {
+            var btnEl = btnEls[i]
+            btnEl.index = i
+            btnEl.onclick = function() {
+                // console.log(btnEl)
+
+                //直接获取this
+                // console.log(this)
+                //绑定索引
+                console.log(this.index)
+            }
+        }
+    </script>
+</body>
+
+</html>

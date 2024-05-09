@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-stringify方法的补充</title>
+</head>
+<body>
+    <script>
+        var info = {
+            name: "chenjiawei",
+            age: 23,
+            height: 175,
+            friend: {
+                name: "chendawei"
+            },
+            // toJSON: function() {
+            //     return "123"
+            // }
+        }
+        var infoString = JSON.stringify(info, function(key, value) {
+            if(key === "name") {
+                return "coderwhy"
+            }
+            return value
+        })
+        console.log(infoString)
+        
+        var infoString2 = JSON.stringify(info,null,4)
+        console.log(infoString2)
+    </script>
+</body>
+</html>

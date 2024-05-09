@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+</head>
+<body>
+     <button>打开新的网页</button>
+     <button>替换新的网页</button>
+     <button>刷新</button>
+    <script>
+        // 完整的url
+        console.log(location.href) //完整的url
+        console.log(location.hostname) //ip
+        console.log(location.host)  //ip + port
+        console.log(location.search)  //查询
+        console.log(location.hash)  //# 
+
+        var btns = document.querySelectorAll("button")
+        btns[0].onclick = function() {
+            location.assign("http://www.baidu.com")  //有返回功能
+        }
+        btns[1].onclick = function() {
+            location.replace("http://www.baidu.com")  //无返回功能
+        }
+        btns[2].onclick = function() {
+            location.reload()  //无返回功能
+        }
+        var urlSearchString = "?age=23&height=183"
+        var searchParams = new URLSearchParams(urlSearchString)
+        console.log(searchParams.get("age"))
+    </script>
+</body> 
+</html>
