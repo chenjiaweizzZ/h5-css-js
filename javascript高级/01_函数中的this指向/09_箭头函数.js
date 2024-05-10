@@ -24,4 +24,16 @@ arr.forEach(i => console.log(i))
 // })
 
 var newNums = num2.filter(i => i % 2  === 0)
-console.log(newNums)
+// console.log(newNums)
+
+var fn = () => 123
+console.log(fn())  //return 123
+
+//如果是对象需要在对象外面再嵌套一个()
+var fn2 = () => ({ name: "陈家伟" })
+console.log(fn2())
+
+//箭头函数实现num2所有偶数平方的和
+var nums = [20, 30, 11]
+var result = nums.filter(item => item % 2 === 0).map(item => item * item).reduce((preValue, item) => preValue + item)
+console.log(result)
