@@ -33,7 +33,7 @@ person1.foo2()  //new Person.name -> 111
 person1.foo2.call(person2)  //new Person.name -> 111  都是去上层作用域寻找
 
 person1.foo3()()  //默认绑定 window.name -> 000
-person1.foo3.call(person2)()  //默认绑定  windowname -> 000
+person1.foo3.call(person2)()  //默认绑定  window.name -> 000
 person1.foo3().call(person2)  //显示绑定 person2.name -> 222
 
 person1.foo4()()  //上层作用域查找  person1
