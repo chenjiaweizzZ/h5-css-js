@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面的合成图层</title>
+    
+    <style>
+        .box, .container {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .container {
+            background-color: brown;
+            /* position: fixed; */
+            /* transform: translateZ(10px); */
+            transition: all 1s ease;
+        }
+        .container:hover {
+            /* transform: translateZ(100px); */
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 形成新图层的常见的属性
+    3D transforms
+    video canvas iframe
+    opacity 动画转换时
+    position: fixed
+    will-change 实验属性 告诉浏览器元素即将发生什么变化
+    animation或者transition设置了opacity、transform -->
+    <div class="box"></div>
+    <div class="container"></div>
+</body>
+</html>
