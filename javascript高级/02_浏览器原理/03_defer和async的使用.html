@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>defer和async</title>
+    <script src="./03_script.js" defer></script>
+    <!-- defer需要放在最前面(head里) -->
+</head>
+<body>
+    
+    <div id="app">app</div>
+    <div id="title">title</div>
+    <div dir="nav">nav</div>
+    <!-- 下载需要很长的事件,执行也需要很长的时间 -->
+    <!-- 加上defer之后,js文件的下载和执行,不会影响后面的DOM Tree的构建 -->
+    
+    <script>
+        window.addEventListener("DOMContentLoaded",() => {
+            console.log("DOMContentLoaded")
+        })
+    </script>
+    <!-- DOMContentLoaded会在defer执行之后执行 -->
+    <h1>哈哈哈哈</h1>
+</body>
+</html>
