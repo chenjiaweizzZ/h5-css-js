@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行上下文的创建</title>
+</head>
+<body>
+    <script>
+        //在任何代码没有执行之前,会在堆内存中创建一个全局对象: Global Object (GO)
+        //该对象所有的作用域(scope)都可以访问
+        //里面包含有Date Array String Number setTimeout setInterval等
+        //其中还有一个window属性指向自己
+        var message = "Global Message"
+        function foo() {
+            var message = "Local Message"
+        }
+    </script>
+</body>
+</html>
