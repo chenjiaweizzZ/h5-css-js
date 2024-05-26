@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <!-- 浏览器不会因async脚本而阻塞
+    async脚本不能保证顺序,她是独立下载、独立运行、不会等待其它的脚本
+    async不能保证在DOMContentLoaded之前或者之后执行 -->
+    <script src="./04_async1.js" async></script>
+    <script src="./04_async2.js" async></script>
+    <!-- 需要操作dom的操作一般都使用defer,async一般用于独立脚本 -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js元素的处理</title>
+</head>
+<body>
+    <!-- 事实上,浏览器在解析HTML的过程中,遇到script元素是不能继续构建dom树的
+    他会停止继续构建,首先下载javascript代码,并且执行javascript脚本
+    只有等到javascript脚本执行结束后,才会继续解析HTML,构建DOM树 -->
+    <!-- 这是因为javascript的作用之一就是操作DOM,并且可以修改DOM
+    如果我们等到DOM树构建完成并且渲染再执行javascript,会造成严重的回流和重绘,影响页面性能
+    所以会在遇到script元素时,优先下载和执行JavaScript代码,再继续构建DOM树 -->
+    <script src="./02_js元素的处理.js"></script>
+    <div class="box"></div>
+</body>
+</html>
