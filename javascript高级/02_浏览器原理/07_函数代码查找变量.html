@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数代码查找变量</title>
+</head>
+
+<body>
+    <script>
+        var message = "global message"
+        function foo() {
+            var message = "foo message"
+            console.log(message)
+        }
+        foo()
+    </script>
+</body>
+
+</html>
