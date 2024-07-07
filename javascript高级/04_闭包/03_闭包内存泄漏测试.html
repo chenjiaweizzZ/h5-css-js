@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包内存泄漏测试</title>
+</head>
+
+<body>
+    <button class="create">create</button>
+    <button class="destory">destory</button>
+
+    <script>
+        function createArray() {
+            var arr = new Array(1024 * 1024).fill(100)
+            function test() {
+                console.log(arr)
+            }
+            return test
+        }
+        // var test = createArray()
+
+        var totalArr = []
+
+        var createBtnEl = document.querySelector(".create")
+        var destoryBtnEl = document.querySelector(".destory")
+
+        createBtnEl.onclick = function () {
+            for (var i = 0; i < 100; i++) {
+                totalArr.push(createArray())
+            }
+        }
+
+        destoryBtnEl.onclick = function () {
+            totalArr = null
+        }
+    </script>
+</body>
+
+</html>
