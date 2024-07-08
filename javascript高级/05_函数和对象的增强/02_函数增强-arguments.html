@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo(m, n) {
+            console.log(arguments) //类数组对象,不是数,可以被便利
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i])
+            }
+            for (var arg of arguments) {  //可迭代对象
+                console.log(arg)
+            }
+            var newArgs = Array.from(arguments) //传入可迭代对象
+            var newArgs2 = [...arguments]
+            var newArgs3 = [].slice.apply(arguments)
+            var largeNums = newArgs3.filter(i => i > 10)
+            console.log(largeNums)
+
+
+        }
+        foo(10, 20, 30, 40)
+    </script>
+</body>
+
+</html>

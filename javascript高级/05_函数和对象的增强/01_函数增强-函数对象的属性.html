@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            console.log("this is foo")
+        }
+        var bar = function () {
+            console.log("this is bar")
+        }
+        var too = function (a, b) {
+            console.log(a, b)
+        }
+        // var obj = {}
+        // obj.address = "杭州市"
+        // console.log(obj.address)
+        foo.address = "杭州市"
+        console.log(foo.address)
+        //默认函数对象中已经有其属性
+        console.log(foo.name, bar.name) //name属性
+        var fns = [foo, bar, too]
+        for (var fn of fns) {
+            console.log(fn.name)
+            console.log(fn.length)  //传入的参数的个数
+        }
+        // function (a, b, ...args, c = "2") 长度依然是2
+        var doo = function (...args) {
+            console.log(args)
+        }
+        doo("a", "b", "c")
+    </script>
+</body>
+
+</html>
