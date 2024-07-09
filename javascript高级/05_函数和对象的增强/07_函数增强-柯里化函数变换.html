@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curry</title>
+</head>
+<body>
+    <script>
+        function foo(x,y,z) {
+            console.log(x+y+z) 
+        }
+        foo(10,20,30)
+
+        function bar(x) {
+            return function(y) {
+                return function(z) {
+                    console.log(x+y+z)
+                }
+            }
+        }
+        bar(10)(20)(30)
+
+        var zar = x => y => z => console.log(x+y+z)
+        zar(10)(20)(30)
+    </script>
+</body>
+</html>
