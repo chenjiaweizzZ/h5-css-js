@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice和slice
+    </title>
+</head>
+<body>
+    <script>
+        var names = ["abc","cba","nba","aaa"]
+        names.slice(0,2)
+        var newNames = [].slice.apply(names, [0,2])
+        console.log(names,newNames)  //不会修改原来的数组
+        names.splice(1,2)  //不是纯函数
+        console.log(names)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯函数概念理解</title>
+</head>
+<body>
+    <script>
+        //确定的输入一定产生确定的输出
+        //函数在执行过程中不能产生副作用
+        function sum(num1,num2) {
+            return num1 + num2
+        }
+        //不是一个纯函数
+        function printInfo(info) {
+            console.log(info.message)
+            info.flag = "end"
+        }
+        var obj = {
+            messaage: "123"
+        }
+        //优点
+        //1.安心的写:不需要去关心外层作用域中的值,目前是什么状态
+    </script>
+</body>
+</html>
