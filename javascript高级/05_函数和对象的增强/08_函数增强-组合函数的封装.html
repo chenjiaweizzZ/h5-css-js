@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组合函数的封装</title>
+</head>
+
+<body>
+    <script>
+        function double(num) {
+            return num * 2
+        }
+        function pow(num) {
+            return num ** 2
+        }
+        // function composeFn(...fns) {
+        //     var len = fns.length;
+        //     if (len <= 0) return function (x) { return x; }; // 如果没有函数，则返回一个恒等函数  
+
+        //     return function (...args) {
+        //         let result = args[0]; // 假设第一个参数是主要的输入  
+        //         for (let i = len - 1; i >= 0; i--) { // 从右到左执行  
+        //             const fn = fns[i];
+        //             if (typeof fn !== "function") {
+        //                 throw new Error(`index position ${i} must be a function`);
+        //             }
+        //             result = fn(result); // 直接调用函数，而不是使用apply（除非需要特定上下文）  
+        //         }
+        //         return result;
+        //     };
+        // }
+        function composeFn(...fns) {
+            var len = fns.length
+            if (len <= 0) return
+            for (var i = 0; i < len; i++) {
+                var fn = fns[i]
+                if (typeof fn !== "function") {
+                    throw new Error(`index position ${i} must be a function`)
+                }
+            }
+            return function (...args) {
+                var result = fns[0].apply(this, args)
+                for (var i = 1; i < len; i++) {
+                    var fn = fns[i]
+                    result = fn.apply(this, [result])
+                }
+                return result
+            }
+        }
+        var newFn = composeFn(double, pow)
+        console.log(newFn(100))
+    </script>
+</body>
+
+</html>
