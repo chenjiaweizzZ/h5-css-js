@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象属性控制</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "chenjiawei",
+            age: 18
+        }
+        //默认情况下属性都是没有特别的限制
+        // obj.name = ""
+        // delete obj.name
+        // console.log(obj.name)
+
+        //可以对我们的对象的属性进行限制
+        //Object.defineProperty(obj, prop, descript)
+        // Configurable 属性是否可以通过delete删除属性,是否可以修改它的特性,或者是否可以将它修改为存取属性描述符号
+        // 当我们直接在一个对象上定义某个属性时,这个属性的Configurable为true  当我们通过属性描述定义一个属性时,这个属性的Configurable为false
+        
+        Object.defineProperty(obj,"name",{
+            configurable: false,  //obj对象的name属性删除不掉
+            enumerable: false, //无法被遍历
+            writable: false, //只能读取,不能写入
+            value: "chenxiaowei"
+        })
+
+        delete obj.name
+        obj.name = "chendawei"
+
+        console.log(obj)
+        console.log(obj.name)
+
+        Object.defineProperty(obj,"address",{
+            configurable: false,  //创建address 属性的值为undefined
+            value: "123"
+        })
+        console.log(obj)
+        console.log(Object.keys(obj))  //但是没有address
+
+    </script>
+</body>
+</html>

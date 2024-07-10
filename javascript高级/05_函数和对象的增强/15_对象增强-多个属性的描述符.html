@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            name: "陈家伟",
+            age: 18,
+            height: 1.75
+        }
+        //给多个属性添加属性描述符
+        Object.defineProperties(obj,{
+            name: {
+                configurable: true,
+                writable: false
+            },
+            age: {
+                configurable: true,
+                writable: false
+            },
+            height: {
+                configurable: true,
+                writable: false
+            }
+        })
+    </script>
+</body>
+</html>

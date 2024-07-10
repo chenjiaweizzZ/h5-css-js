@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>严格模式的限制</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        //1.不会意外创建全局变量
+        // function foo() {
+        //     message = "hello world"
+        // }
+        // foo()
+        // console.log(message)
+
+        //2.发现静默错误
+        // var obj = {
+        //     name: "chenjiawei"
+        // }
+        // Object.defineProperty(obj,"name",{
+        //     writable: false,  //不可修改
+        //     configurable: false  //不可删除 delete obj.name
+        // })
+        // obj.name = "chendawei"
+        // console.log(obj.name)
+
+        //3.参数的名称不能相同
+        
+        //4.不能以0开头
+        // console.log(0o123)
+
+        //5.eval不能为上层创建变量
+        // eval(`"use strict"; console.log(obj.name)`)
+
+        //6.严格模式下不允许使用with
+
+        //7.this绑定不会默认转换为对象
+        function foo() {
+            console.log(this)
+        }
+        foo.apply("bac")
+        foo.apply(undefined)
+        foo.apply(null)
+        foo() //不会绑定到window,不绑定全局对象,而是undefined
+    </script>
+</body>
+</html>
