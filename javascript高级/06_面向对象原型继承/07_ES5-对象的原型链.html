@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var info = {}  var info = new Object()
+        // info.__proto__ === Object.prototype
+        var obj = {
+            name: "why",
+            age: 18
+        }
+        console.log(obj.message)
+        obj.__proto__ = {
+            // message: "Hello proto"
+        }
+        obj.__proto__.__proto__ = {
+            message: "hello proto2"
+        }
+        console.log(obj.message)
+    </script>
+</body>
+
+</html>

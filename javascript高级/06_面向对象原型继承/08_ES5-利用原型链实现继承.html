@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //定义Person构造函数(类)
+        function Person(name, age) {
+            this.name = name
+            this.age = age
+        }
+        Person.prototype.eating = function () {
+            console.log("eating")
+        }
+
+        //定义学生类
+        function Student(name, age, sno) {
+            this.name = name
+            this.age = age
+            this.sno = sno
+        }
+
+        //父类的原型直接赋给子类
+        //缺点:父类和子类共享一个原型对象,修改了任意一个另外一个也会被修改
+        // Student.prototype = Person.prototype
+
+        //创建一个父类的实例对象(new Person()),用这个实例对象来作为子类的原型对象
+        var p = new Person("p", 18)
+        Student.prototype = p
+
+        Student.prototype.studying = function () {
+            console.log("studying")
+        }
+
+
+
+        var stu1 = new Student("chenjiawei", 18, 23)
+
+        stu1.eating()
+    </script>
+</body>
+
+</html>

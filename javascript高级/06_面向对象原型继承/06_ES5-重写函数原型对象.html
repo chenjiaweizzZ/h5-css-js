@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person() { }
+        Person.prototype.message = "hello"
+        Person.prototype.info = "123"
+        Person.prototype.running = function () {
+            console.log("running")
+        }
+        console.log(Object.keys(Person.prototype))
+        //失去construct
+        Person.prototype = {
+            message: "hi",
+            // constructor: Person
+        }
+        Object.defineProperty(Person.prototype, constructor, {
+            configurable: false,
+            writable: false,
+            value: Person
+        })
+        console.log(Object.keys(Person.prototype))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建函数重复
+        function Student(name, age, sno) {
+            this.name = name
+            this.age = age
+            this.sno = sno
+            // this.running = function () {
+            //     console.log(this.name + "running")
+            // }
+            // this.eating = function () {
+            //     console.log(this.name + "eating")
+            // }
+        }
+        //当我们多个对象拥有共同的值时,我们可以将他放到构造函数的显式原型上
+        //由构造函数创造出来的所有对象,都会享受这些属性
+        Student.prototype.running = function () {
+            console.log(this.name + "runing")
+        }
+        var stu1 = new Student("chenjiawei", 18, 123)
+        var stu2 = new Student("chenxiaowei", 19, 124)
+        // stu1的隐式原型是谁 Student.prototype对象
+        // stu1.running查找:
+        // 现在自身身上找function Student
+        // 去原型中查找
+        stu1.running()
+    </script>
+</body>
+
+</html>

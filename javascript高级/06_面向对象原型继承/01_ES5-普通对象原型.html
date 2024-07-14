@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            name: "陈家伟",
+            age: 18
+        }
+        //获取对象的原型
+        console.log(obj.__proto__) //非标准
+        console.log(Object.getPrototypeOf(obj))  //标准
+        console.log(obj.__proto__ === Object.getPrototypeOf(obj))
+
+        //当我们通过[[get]]方式获取一个属性对应的value时
+        //1.优先在自己的对象中查找,如果找到就直接返回
+        //2.如果没有找到,那么会在原型对象中查找
+        obj.__proto__.message = "hello proto"
+        console.log(obj.message)
+    </script>
+</body>
+
+</html>
