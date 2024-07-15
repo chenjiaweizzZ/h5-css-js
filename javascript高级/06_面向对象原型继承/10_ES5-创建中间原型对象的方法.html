@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function createObject(obj) {
+
+        // }
+        function Person() { }
+
+        function Student() { }
+
+        // function F() { }
+        // F.prototype = Person.prototype
+        // Student.prototype = new F()
+        var obj = Object.create(Person.prototype)
+        console.log(obj.__proto__ === Person.prototype)
+        Student.prototype = obj
+
+        //真实开发进行封装
+        function inherit(Subtype, Supertype) {
+            Subtype.prototype = Object.create(Supertype.prototype)
+        }
+
+        inherit(Student, Person)
+    </script>
+</body>
+
+</html>
