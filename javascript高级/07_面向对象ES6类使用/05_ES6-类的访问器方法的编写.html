@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this._name = name //以_开头的属性和方法，约定俗成不在外界访问
+            }
+            set name(value) {
+                console.log("设置name")
+                this._name = value
+            }
+            get name() {
+                console.log("获取name")
+                return this._name
+            }
+        }
+        var p1 = new Person("why", 18)
+        // console.log(p1._name)  
+        p1.name = "陈家伟"
+        console.log(p1.name)
+
+        class Rectangle {
+            constructor(x, y, width, height) {
+                this.x = x
+                this.y = y
+                this.width = width
+                this.height = height
+            }
+            get position() {
+                return { x: this.x, y: this.y }
+            }
+        }
+
+        var rect1 = new Rectangle(10, 20, 100, 200)
+
+        console.log(rect1.position)
+
+    </script>
+</body>
+
+</html>
