@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age) {
+            this.name = name
+            this.age = age
+        }   
+        Person.prototype.studying = function() {
+            console.log(this.name + "is studying")  //实例方法
+        }
+
+        //添加到Person对象本身方法的方法为类方法
+        // JSON.parse()
+        Person.eating = function() {
+            console.log("is running")
+        }
+
+        var p1 = new Person("chenjiawei",24)
+        p1.studying()
+        // Person.eating()
+        var eat = Person.eating
+        eat()
+
+        //没有实例对象的情况下,无法调用prototype上的函数
+        // Person.running()
+        // Person.prototype.running() //无意义
+    </script>
+</body>
+</html>
