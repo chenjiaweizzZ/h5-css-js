@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extends</title>
+</head>
+
+<body>
+    <script>
+        // class Student {
+        //     constructor(name,age,sno,score) {
+        //         this.name = name
+        //         this.age = age
+        //         this.sno = sno
+        //         this.score = score
+        //     }
+        //     eating() {}
+        //     studying() {}
+        // }
+        // class Student {
+        //     constructor(name,age,title) {
+        //         this.name = name
+        //         this.age = age
+        //         this.title = title
+        //     }
+        //     eating() {}
+        //     teachinga() {}
+        // }
+        class Person {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+            eating() { console.log("eating") }
+            sleeping() { console.log("sleeping") }
+        }
+        class Student extends Person {
+            constructor(name, age, sno, score) {
+                super(name, age)
+                this.sno = sno
+                this.score = score
+            }
+            studying() {
+                console.log("studying")
+            }
+        }
+        var stu1 = new Student("chenjiawei",23,33,88)
+        console.log(stu1)
+        stu1.eating()
+        stu1.studying()
+    </script>
+</body>
+
+</html>
