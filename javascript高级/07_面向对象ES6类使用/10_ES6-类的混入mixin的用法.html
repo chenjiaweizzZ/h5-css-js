@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        function mixinAnimal(baseClass) {
+            return class extends baseClass {
+                running() {
+                    console.log("running")
+                }
+            }
+        }
+        // class Animal {
+        //     running() {}
+        // }
+        function mixinFlyer(baseClass) {
+            return class extends baseClass {
+                flying() {
+                    console.log("flying")
+                }
+            }
+        }
+        // class Flyer {
+        //     flying() {}
+        // }
+        class Bird {
+            eating() {
+                console.log("eating")
+            }
+        }
+        var NewBird = mixinAnimal(mixinFlyer(Bird))
+        var bird = new NewBird()
+        console.log(bird)
+        bird.running()
+        bird.flying()
+        bird.eating()
+    </script>
+</body>
+</html>
