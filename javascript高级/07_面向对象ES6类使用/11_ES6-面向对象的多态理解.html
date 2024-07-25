@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //继承是多态的前提
+        class Shape {
+            getArea() {
+
+            }
+        }
+        class Reactangle extends Shape{
+            constructor(width,height) {
+                super()
+                this.width = width
+                this.height = height
+            }
+            getArea() {
+                return this.width * this.height
+            }
+        }
+        class Circle extends Shape {
+            constructor(radius) {
+                super()
+                this.radius = radius
+            }
+            getArea() {
+                return this.radius * this.radius * 3.14
+            }
+        }
+        var rect1 = new Reactangle(100, 200)
+        var rect2 = new Reactangle(20, 30)
+        var c1 = new Circle(10)
+        var c2 = new Circle(20)
+
+        function getShapeArea(shape) {
+            console.log(shape.getArea())
+        }
+
+        getShapeArea(rect1)
+        
+
+    </script>
+</body>
+</html>
